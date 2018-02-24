@@ -14,7 +14,8 @@ Our goal is for this application to create a fun interactive way for students an
     
 ## Timeline
     Week 1 - Create basic pages with correct express routing (No games, just pages)
-    Week 2 - 
+    Week 2 - Implement & Code games / Database setups
+    Week 3 - UI Polish / Final cuts / presentations
 
 ## UI/UIX Layout
     The following is a basic layout of the app.
