@@ -6,8 +6,8 @@ Our goal is for this application to create a fun interactive way for students an
 
 ## Roles
 ### Harry
-    +Teacher Page - create the react teacher page and get basic links and functionality working.
+    Teacher Page - create the react teacher page and get basic links and functionality working.
 ### Brandon
-    +Login Page - Getting passport authentication to work
+    Login Page - Getting passport authentication to work
 ### Suhail
-    +Student Page - Create basic layout and links for Student page. Then work on Express routes for pages.
+    Student Page - Create basic layout and links for Student page. Then work on Express routes for pages.
