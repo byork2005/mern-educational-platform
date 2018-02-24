@@ -19,20 +19,26 @@ Our goal is for this application to create a fun interactive way for students an
 ## UI/UIX Layout
     The following is a basic layout of the app.
     
-   Inline-style: 
 ![alt text](https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/signIn.png "Main Page")
 
-Inline-style: 
 ![alt text](https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/signInChoice.png "Choose Account Type")
 
 This is the main page, allowing the user to cfreat an account of log in.  The next page asks if they are creating a Teacher or Student      Account.
 
-Inline-style: 
 ![alt text](https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/teacherAcctPage.png "Teacher Account Page")
 
 This is the teacher account page.  Here, a teacher can see their classes, create a class, and enter their classes' individual pages.
-
-Inline-style: 
+ 
 ![alt text](https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/teacherClassPage.png "Teacher Class Page")
 
 Each class page is unique.  Here, the teacher can see their class roster, make class announcements, and see what applications that have assinged to the class.  There is also an option to add and remove applications.
+
+![alt text](https:https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/studentAcctPage.png "Student Account Page")
+
+This is the student account page. Here they can see their classes, add a class, and enter the class.
+
+![alt text] (https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/studentClassPage.png "Student Class Page")
+
+This is the students individual class page.  Here they can see any announcements from their teacher, what applications they need to do, and if they have completed them.
+
+
