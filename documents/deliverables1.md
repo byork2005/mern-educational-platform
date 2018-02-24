@@ -33,11 +33,11 @@ This is the teacher account page.  Here, a teacher can see their classes, create
 
 Each class page is unique.  Here, the teacher can see their class roster, make class announcements, and see what applications that have assinged to the class.  There is also an option to add and remove applications.
 
-![alt text](https:https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/studentAcctPage.png "Student Account Page")
+![alt text](https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/studentAcctPage.png "Student Account Page")
 
 This is the student account page. Here they can see their classes, add a class, and enter the class.
 
-![alt text] (https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/studentClassPage.png "Student Class Page")
+![alt text](https://github.com/byork2005/mern-educational-platform/blob/master/documents/images/studentClassPage.png "Student Class Page")
 
 This is the students individual class page.  Here they can see any announcements from their teacher, what applications they need to do, and if they have completed them.
 
