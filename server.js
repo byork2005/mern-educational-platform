@@ -10,6 +10,9 @@ const PORT = 8080
 // Route requires
 const user = require('./routes/user')
 
+// Database
+var db = require("./models");
+
 // MIDDLEWARE
 app.use(morgan('dev'))
 app.use(
@@ -38,6 +41,8 @@ app.use(passport.session()) // calls the deserializeUser
 app.use('/user', user)
 
 // Starting Server 
-app.listen(PORT, () => {
-	console.log(`App listening on PORT: ${PORT}`)
-})
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
