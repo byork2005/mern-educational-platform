@@ -27,10 +27,10 @@ const Login = () =>
             </label>
           </div>
           <div class="form-group">
-            <button type="button" class="btn btn-def btn-block">Login</button>
+            <a href="/studenthome"><button type="button" class="btn btn-def btn-block">Login</button></a>
           </div>
           <div class="form-group text-center">
-            <a href="asdasd">Forgot Password</a>&nbsp;|&nbsp;<a href="asdads">Support</a>
+            <a href="asdasd">Forgot Password</a>&nbsp;|&nbsp;<a href="/teacherhome">Support</a>
           </div>
         </form>        
       </div>  

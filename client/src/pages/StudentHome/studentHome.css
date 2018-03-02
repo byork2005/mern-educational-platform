@@ -1,4 +1,6 @@
 .well {
     background-color: rgba(207, 207, 207, 0.8);
-    height: 300px;
+}
+.media {
+    height: auto;
 }
