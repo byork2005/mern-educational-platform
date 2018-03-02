@@ -1,5 +1,6 @@
-body {
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: 1920px 1080px;
+.well {
+    background-color: rgba(207, 207, 207, 0.8);
+}
+.media {
+    height: auto;
 }
