@@ -19,15 +19,15 @@ Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Ae
 dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
 Aliquam in felis sit amet augue.</p>
           <ul className="list-inline list-unstyled">
-  			<li><span><i className="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+  			<li><span><i className="glyphicon glyphicon-calendar"></i> 4 days, 2 hours </span></li>
             <li>|</li>
-            <span><i className="glyphicon glyphicon-comment"></i> 2 comments</span>
+            <span><i className="glyphicon glyphicon-comment"></i> 1 comment</span>
             <li>|</li>
             <li>
-               <span className="glyphicon glyphicon-star"></span>
                         <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
-                        <span className="glyphicon glyphicon-star"></span>
+                        <span className="glyphicon glyphicon-star-empty"></span>
+                        <span className="glyphicon glyphicon-star-empty"></span>
+                        <span className="glyphicon glyphicon-star-empty"></span>
                         <span className="glyphicon glyphicon-star-empty"></span>
             </li>
             <li>|</li>
