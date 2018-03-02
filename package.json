@@ -1,8 +1,9 @@
 {
-  "name": "mern-educational-platform",
+  "name": "mern",
   "version": "1.0.0",
-  "description": "education application for use by teachers and students",
-  "main": "index.js",
+
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
@@ -12,6 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "installDeps": "yarn && cd client && yarn"
   },
+
   "devDependencies": {
     "concurrently": "^3.5.0",
     "nodemon": "^1.17.1"
@@ -29,9 +31,16 @@
     "url": "git+https://github.com/byork2005/mern-educational-platform.git"
   },
   "author": "brandon, harry and suhail",
+
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/byork2005/mern-educational-platform/issues"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/byork2005/mern-educational-platform#readme"
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7"
+  }
 }
