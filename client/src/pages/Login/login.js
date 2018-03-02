@@ -1,33 +1,35 @@
 import React from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+// import { Input, TextArea, FormBtn } from "../../components/Form";
+import { LoginInput, LoginBtn } from "../../components/LoginStuff";
+import "./login.css";
+
 
 const Login = () =>
   <Container fluid>
     <Row>
       <Col size="md-12">
-        <Jumbotron>
-          <h1>Log in here</h1>
-          <Input
+
+          <h1 className = "text-center">Log in here</h1>
+          <LoginInput
                 // value={this.state.username}
                 // onChange={this.handleInputChange}
                 name="username"
                 placeholder="username (required)"
               />
-                        <Input
+                        <LoginInput
                 // value={this.state.username}
                 // onChange={this.handleInputChange}
                 name="password"
                 placeholder="password (required)"
               />
-              <FormBtn
+              <LoginBtn
                 // disabled={!(this.state.author && this.state.title)}
                 // onClick={this.handleFormSubmit}
               >
                 Login
-              </FormBtn>
-        </Jumbotron>
+              </LoginBtn>
       </Col>
     </Row>
   </Container>;
