@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NoMatch from "./pages/NoMatch";
+import StudentHome from "./pages/StudentHome";
+import TeacherHome from "./pages/TeacherHome";
+import TeacherClass from "./pages/TeacherClass";
+import Login from "./pages/Login";
+import Nav from "./components/Nav";
 
-import Signup from './components/sign-up'
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <Signup/>
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () =>
+  <Router>
+    <div>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/studenthome" component={StudentHome} />
+        <Route exact path="/teacherhome" component={TeacherHome} />
+        <Route exact path="/teacherclass" component={TeacherClass} />
+        <Route component={NoMatch} />
+      </Switch>
+    </div>
+  </Router>;
 
 export default App;
