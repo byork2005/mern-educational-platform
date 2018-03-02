@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
 import StudentHome from "./pages/StudentHome";
 import TeacherHome from "./pages/TeacherHome";
+import TeacherClass from "./pages/TeacherClass";
 import Login from "./pages/Login";
 import Nav from "./components/Nav";
 
@@ -14,10 +15,10 @@ const App = () =>
         <Route exact path="/" component={Login} />
         <Route exact path="/studenthome" component={StudentHome} />
         <Route exact path="/teacherhome" component={TeacherHome} />
+        <Route exact path="/teacherclass" component={TeacherClass} />
         <Route component={NoMatch} />
       </Switch>
     </div>
   </Router>;
-
 
 export default App;
