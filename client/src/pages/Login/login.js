@@ -23,7 +23,7 @@ const Login = () =>
           </div>
           <div class="checkbox">
             <label>
-              <input type="checkbox"/> I agree to the <a href="asdasd">Terms and Conditions</a>
+              <input type="checkbox"/> I agree to the <a href="/teacherclass">Terms and Conditions</a>
             </label>
           </div>
           <div class="form-group">
