@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import TeacherHome from "./pages/TeacherHome";
 // import TeacherClass from "./pages/TeacherClass";
 // import Login from "./pages/Login";
-import {Nav, NavItem} from "react-bootstrap";
+import {Nav, NavItem, Navbar, NavbarBrand, MenuItem, NavDropdown} from "react-bootstrap";
 
 
 function handleSelect(selectedKey) {
@@ -14,17 +14,28 @@ function handleSelect(selectedKey) {
 const App = () =>
   <Router>
     <div>
-    <Nav bsStyle="pills" activeKey={1} onSelect={handleSelect}>
-    <NavItem eventKey={1} href="/home">
-      NavItem 1 content
+    <Navbar>
+  <Navbar.Header>
+    <Navbar.Brand>
+      <a href="#home">React-Bootstrap</a>
+    </Navbar.Brand>
+  </Navbar.Header>
+  <Nav>
+    <NavItem eventKey={1} href="#">
+      Link
     </NavItem>
-    <NavItem eventKey={2} title="Item">
-      NavItem 2 content
+    <NavItem eventKey={2} href="#">
+      Link
     </NavItem>
-    <NavItem eventKey={3} disabled>
-      NavItem 3 content
-    </NavItem>
+    <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+      <MenuItem eventKey={3.1}>Action</MenuItem>
+      <MenuItem eventKey={3.2}>Another action</MenuItem>
+      <MenuItem eventKey={3.3}>Something else here</MenuItem>
+      <MenuItem divider />
+      <MenuItem eventKey={3.4}>Separated link</MenuItem>
+    </NavDropdown>
   </Nav>
+</Navbar>
       <Switch>
         {/* <Route exact path="/" component={Login} />
         <Route exact path="/studenthome" component={StudentHome} />
