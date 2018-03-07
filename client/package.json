@@ -6,10 +6,12 @@
   "dependencies": {
     "axios": "^0.16.2",
     "material-ui": "^0.20.0",
+    "moment": "^2.21.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.14",
+    "react-week-calendar": "^0.1.1",
     "yarn": "^1.5.1"
   },
   "scripts": {
