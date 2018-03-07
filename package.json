@@ -13,6 +13,7 @@
     "installDeps": "yarn && cd client && yarn"
   },
   "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "concurrently": "^3.5.0",
     "nodemon": "^1.11.0"
   },
