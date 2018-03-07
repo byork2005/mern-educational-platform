@@ -16,10 +16,27 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.User
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    db.User.findOne({ email: email }, (err, user) => {
+      if (err) {
+        console.log('User.js post error: ', err)
+      } else if (user) {
+        res.json({
+            error: `Sorry, already a user with the email: ${email}`
+        })
+      } else {
+        const newUser = new User({
+          name: name,
+          password: password,
+          email: email,
+          role: role,
+          course: course
+        })
+        newUser.save((err, savedUser) => {
+          if (err) return res.json(err)
+          res.json(savedUser)
+        })
+      }  
+    })  
   },
   update: function(req, res) {
     db.User
