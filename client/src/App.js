@@ -28,7 +28,7 @@ const App = () => (
 
         {/* <Route component={NoMatch} /> */}
       </Switch>
-      {/* <Signup signup={this.signup}/> */}
+      <Signup Signup={this.signup}/>
       <Login updateUser={this.updateUser}/>
     </div>
   </Router>
