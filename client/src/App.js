@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import StudentHome from "./pages/StudentHome";
-// import TeacherHome from "./pages/TeacherHome";
+import TopNav from "./components/TopNav";
+import StudentHome from "./pages/StudentHome";
+import TeacherClassPage from "./pages/TeacherClassPage";
 // import TeacherClass from "./pages/TeacherClass";
 // import Login from "./pages/Login";
 import {
@@ -22,6 +23,7 @@ function handleSelect(selectedKey) {
 const App = () => (
   <Router>
     <div>
+
       <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
@@ -55,11 +57,12 @@ const App = () => (
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+
       <Switch>
-        {/* <Route exact path="/" component={Login} />
+        {/* <Route exact path="/" component={Login} /> */}
         <Route exact path="/studenthome" component={StudentHome} />
-        <Route exact path="/teacherhome" component={TeacherHome} />
-        <Route exact path="/teacherclass" component={TeacherClass} /> */}
+        {/* <Route exact path="/teacherhome" component={TeacherHome} /> */}
+        <Route exact path="/teacherclass" component={TeacherClassPage} />
         {/* <Route component={NoMatch} /> */}
       </Switch>
       {/* <Signup signup={this.signup}/> */}
