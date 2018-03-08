@@ -15,3 +15,7 @@ var gradebookSchema = new Schema({
         },
     },
   });
+
+  const Gradebook = mongoose.model("Gradebook", gradebookSchema);
+
+  module.exports = Gradebook;
