@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Row, Col} from 'react-bootstrap';
 import DateClock from './dcomponents/DateClock';
-import Calendar from './dcomponents/Calendar';
 import Notepad from './dcomponents/Notepad'
 import ClassInfo from './dcomponents/ClassInfo'
 import './Dashboard.css';
