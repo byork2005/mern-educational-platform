@@ -5,11 +5,10 @@ class Signup extends Component {
 	constructor() {
 		super()
 		this.state = {
-			username: '',
+			name: '',
 			password: '',
-			confirmPassword: '',
-			type: ''
-
+			role: 'student',
+			email: ''
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
@@ -20,14 +19,15 @@ class Signup extends Component {
 		})
 	}
 	handleSubmit(event) {
-		console.log('sign-up handleSubmit, username: ')
-		console.log(this.state.username)
+		console.log('sign-up handleSubmit, name: ', this.state.name)
 		event.preventDefault()
 
-		// request to server to add a new username/password
-		axios.post('/user/', {
-			username: this.state.username,
-			password: this.state.password
+		// request to server to add a new name/password
+		axios.post('api/users/signup', {
+			name: this.state.name,
+			password: this.state.password,
+			email: this.state.email,
+			role: this.state.role,
 		})
 			.then(response => {
 				console.log(response)
@@ -37,31 +37,45 @@ class Signup extends Component {
 						redirectTo: '/login'
 					})
 				} else {
-					console.log('username already taken')
+					console.log('email already taken')
 				}
 			}).catch(error => {
-				console.log('signup error: ')
-				console.log(error)
+				console.log('signup error: ', error)
 			})
 	}
 
 
 render() {
 	return (
-		<div className="SignupForm">
+		<div className="SignupForm" align="center">
 			<h4>Sign up</h4>
 			<form className="form-horizontal">
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="username">Username</label>
+						<label className="form-label" htmlFor="name">Name</label>
 					</div>
 					<div className="col-3 col-mr-auto">
 						<input className="form-input"
 							type="text"
-							id="username"
-							name="username"
-							placeholder="Username"
-							value={this.state.username}
+							id="name"
+							name="name"
+							placeholder="Name"
+							value={this.state.name}
+							onChange={this.handleChange}
+						/>
+					</div>
+				</div>
+				<div className="form-group">
+					<div className="col-1 col-ml-auto">
+						<label className="form-label" htmlFor="email">Email</label>
+					</div>
+					<div className="col-3 col-mr-auto">
+						<input className="form-input"
+							type="text"
+							id="signupEmail"
+							name="email"
+							placeholder="Email"
+							value={this.state.email}
 							onChange={this.handleChange}
 						/>
 					</div>
@@ -72,21 +86,13 @@ render() {
 					</div>
 					<div className="col-3 col-mr-auto">
 						<input className="form-input"
-							placeholder="password"
+							placeholder="Password"
 							type="password"
 							name="password"
 							value={this.state.password}
 							onChange={this.handleChange}
 						/>
 					</div>
-				</div>
-				<div className="form-group">
-					<label className='col-7'>Student or Teacher?
-						<select type={this.state.type} onChange={this.handleChange}>
-							<option type='Student'>Student</option>
-							<option type='Teacher'>Teacher</option>
-						</select>
-					</label>
 				</div>
 				<div className="form-group ">
 					<div className="col-7"></div>
