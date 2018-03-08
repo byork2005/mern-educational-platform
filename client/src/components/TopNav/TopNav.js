@@ -27,7 +27,7 @@ const TopNav = () =>
         </Nav> */}
         <Nav pullRight>
             <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Gmail</MenuItem>
+                <MenuItem eventKey={3.1}>Leave Classroom</MenuItem>
                 {/* <MenuItem eventKey={3.2}>Another action</MenuItem>
                 <MenuItem eventKey={3.3}>Something else here</MenuItem> */}
                 <MenuItem divider />
