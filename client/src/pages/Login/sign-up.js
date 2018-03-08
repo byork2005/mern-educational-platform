@@ -8,9 +8,7 @@ class Signup extends Component {
 			name: '',
 			password: '',
 			role: 'student',
-			email: '',
-			course: ''
-
+			email: ''
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
@@ -25,10 +23,11 @@ class Signup extends Component {
 		event.preventDefault()
 
 		// request to server to add a new name/password
-		axios.post('api/users/login', {
+		axios.post('api/users/signup', {
 			name: this.state.name,
 			password: this.state.password,
-			email: this.state.email
+			email: this.state.email,
+			role: this.state.role,
 		})
 			.then(response => {
 				console.log(response)
@@ -41,8 +40,7 @@ class Signup extends Component {
 					console.log('email already taken')
 				}
 			}).catch(error => {
-				console.log('signup error: ')
-				console.log(error)
+				console.log('signup error: ', error)
 			})
 	}
 

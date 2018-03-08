@@ -6,10 +6,7 @@ const passport = require('../../passport');
 router
   .route('/')
   // .get(usersController.findAll)
-  .get(() => {
-    console.log('hello');
-  })
-  .post(usersController.create);
+  .get(() => {console.log('GET Hello')})
 
 // Matches with "/api/users/:id"
 router
@@ -29,12 +26,45 @@ router.post(
   },
   passport.authenticate('local'),
   (req, res) => {
-    console.log('logged in', req.user);
+    console.log('req', req);
     const userInfo = {
-      email: req.user.email
+      // email: req.user.email
     };
     res.send(userInfo);
   }
 );
+
+// Matches with api/users/signup
+router
+  .route('/signup')
+  .post(usersController.create)
+
+// router.post('/signup', (req, res) => {
+//   console.log('user signup');
+
+//   const { email, password, name, role } = req.body
+//   // ADD VALIDATION
+//   User.findOne({ email: email }, (err, user) => {
+//       if (err) {
+//           console.log('User.js post error: ', err)
+//       } else if (user) {
+//           res.json({
+//               error: `Sorry, already a user with the email: ${email}`
+//           })
+//       }
+//       else {
+//           const newUser = new User({
+//               username: name,
+//               password: password,
+//               role: role,
+//               name: name
+//           })
+//           newUser.save((err, savedUser) => {
+//               if (err) return res.json(err)
+//               res.json(savedUser)
+//           })
+//       }
+//   })
+// })
 
 module.exports = router;
