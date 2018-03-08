@@ -1,4 +1,5 @@
 const db = require("../models");
+const passport = require('../passport');
 
 // Defining methods for the UsersController
 module.exports = {
@@ -15,12 +16,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  // Checks if current user email exists, if not creates new user and saves to db
   create: function(req, res) {
-    console.log('Hello Create');
     const { email, password, name, role } = req.body;
     db.User.findOne({ email: email }, (err, user) => {
       if (err) {
-        console.log('User.js post error: ', err)
+        console.log('userController.js post error: ', err)
       } else if (user) {
         res.json({
             error: `Sorry, already a user with the email: ${email}`
@@ -39,6 +40,19 @@ module.exports = {
       }  
     })  
   },
+  // Authenticates user and logs them in
+  login: function(req, res) {
+    console.log('login working')
+    passport.authenticate('local'),
+    (req, res) => {
+      console.log('req', req);
+      const userInfo = {
+        email: req.user.email
+      };
+      res.send(userInfo);
+    }
+  },
+
   update: function(req, res) {
     db.User
       .findOneAndUpdate({ _id: req.params.id }, req.body)

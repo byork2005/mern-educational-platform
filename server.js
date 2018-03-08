@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const session = require('express-session');
 const passport = require('./passport');
+const MongoStore = require('connect-mongo')(session)
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,8 +32,9 @@ mongoose.connect(
 app.use(
   session({
     secret: 'rock-chalk',
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: false
   })
 )
 

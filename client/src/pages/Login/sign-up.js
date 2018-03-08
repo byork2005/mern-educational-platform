@@ -72,7 +72,7 @@ render() {
 					<div className="col-3 col-mr-auto">
 						<input className="form-input"
 							type="text"
-							id="email"
+							id="signupEmail"
 							name="email"
 							placeholder="Email"
 							value={this.state.email}

@@ -26,7 +26,7 @@ class Login extends Component {
         console.log('handleSubmit')
 
         axios
-            .post('/user/login', {
+            .post('api/users/login', {
                 email: this.state.email,
                 password: this.state.password
             })
@@ -66,7 +66,7 @@ class Login extends Component {
                             <div className="col-3 col-mr-auto">
                                 <input className="form-input"
                                     type="text"
-                                    id="email"
+                                    id="loginEmail"
                                     name="email"
                                     placeholder="Email"
                                     value={this.state.email}

@@ -12,7 +12,8 @@ import {
   MenuItem,
   NavDropdown
 } from "react-bootstrap";
-import Signup from "./pages/Login";
+import Signup from "./pages/Login/sign-up.js";
+import Login from "./pages/Login/login.js"
 
 function handleSelect(selectedKey) {
   alert(`selected ${selectedKey}`);
@@ -61,7 +62,8 @@ const App = () => (
         <Route exact path="/teacherclass" component={TeacherClass} /> */}
         {/* <Route component={NoMatch} /> */}
       </Switch>
-      <Signup signup={this.signup}/>
+      {/* <Signup signup={this.signup}/> */}
+      <Login updateUser={this.updateUser}/>
     </div>
   </Router>
 );
