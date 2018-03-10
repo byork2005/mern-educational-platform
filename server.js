@@ -7,12 +7,18 @@ const PORT = process.env.PORT || 3001;
 const session = require('express-session');
 const passport = require('./passport');
 const MongoStore = require('connect-mongo')(session)
+const Auth = require('./passport/index.js')
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets
 app.use(express.static("client/build"));
+
+// Passport
+app.use(passport.initialize())
+app.use(passport.session())
+
 // Add routes, both API and view
 app.use(routes);
 
@@ -23,9 +29,9 @@ mongoose.connect(
 
   process.env.MONGODB_URI || "mongodb://localhost:27017/edu_platform_db",
 
-  {
-    useMongoClient: true
-  }
+  // {
+  //   useMongoClient: true
+  // }
 );
 
 // Sessions
@@ -39,8 +45,12 @@ app.use(
 )
 
 // Passport
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
+
+// passport.use(new LocalStrategy(Account.authenticate()));
+// passport.serializeUser(Account.serializeUser());
+// passport.deserializeUser(Account.deserializeUser());
 
 // Start the API server
 app.listen(PORT, function() {

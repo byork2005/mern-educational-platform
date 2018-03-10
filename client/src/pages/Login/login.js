@@ -24,7 +24,6 @@ class Login extends Component {
     handleSubmit(event) {
         event.preventDefault()
         console.log('handleSubmit')
-
         axios
             .post('api/users/login', {
                 email: this.state.email,
@@ -42,7 +41,7 @@ class Login extends Component {
                     // update the state to redirect to home
                     this.setState({
                         redirectTo: '/'
-                    })
+                    })  
                 }
             }).catch(error => {
                 console.log('login error: ')
@@ -80,7 +79,7 @@ class Login extends Component {
                             </div>
                             <div className="col-3 col-mr-auto">
                                 <input className="form-input"
-                                    placeholder="password"
+                                    placeholder="Password"
                                     type="password"
                                     name="password"
                                     value={this.state.password}

@@ -43,14 +43,15 @@ module.exports = {
   // Authenticates user and logs them in
   login: function(req, res) {
     console.log('login working')
-    passport.authenticate('local'),
-    (req, res) => {
-      console.log('req', req);
-      const userInfo = {
-        email: req.user.email
-      };
-      res.send(userInfo);
-    }
+    res.redirect('/studenthome')
+    // passport.authenticate('local'),
+    // (req, res) => {
+    //   console.log('req', req);
+    //   const userInfo = {
+    //     email: req.user.email
+    //   };
+    //   res.send(userInfo);
+    // }
   },
 
   update: function(req, res) {
