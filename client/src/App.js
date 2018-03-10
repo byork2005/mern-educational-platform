@@ -21,41 +21,12 @@ class App extends Component {
       name: null
     }
 
-    // this.getUser = this.getUser.bind(this)
-    // this.componentDidMount = this.componentDidMount.bind(this)
     this.updateUser = this.updateUser.bind(this)
   }
-
-  // componentDidMount() {
-  //   this.getUser()
-  // }
 
   updateUser (userObject) {
     this.setState(userObject)
   }
-
-  // getUser() {
-  //   axios.get('/studenthome/').then(response => {
-  //     console.log('Get user response: ')
-  //     console.log(response.data)
-  //     if (response.data.user) {
-  //       console.log('Get User: There is a user saved in the server session: ')
-
-  //       this.setState({
-  //         loggedIn: true,
-  //         email: response.data.user.email,
-  //         name: response.data.user.name
-  //       })
-  //     } else {
-  //       console.log('Get user: no user');
-  //       this.setState({
-  //         loggedIn: false,
-  //         email: null,
-  //         name: null
-  //       })
-  //     }
-  //   })
-  // }
 
   render() {
     return (
@@ -75,7 +46,7 @@ class App extends Component {
           {/* <Route component={NoMatch} /> */}
         </Switch>
         {/* <Signup Signup={this.signup}/> */}
-        <Login updateUser={this.updateUser}/>
+        {/* <Login updateUser={this.updateUser}/> */}
       </div>
     </Router>
     )
