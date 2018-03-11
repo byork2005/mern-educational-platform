@@ -28,10 +28,6 @@ mongoose.Promise = global.Promise;
 mongoose.connect(
 
   process.env.MONGODB_URI || "mongodb://localhost:27017/edu_platform_db",
-
-  // {
-  //   useMongoClient: true
-  // }
 );
 
 // Sessions

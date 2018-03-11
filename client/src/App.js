@@ -18,14 +18,16 @@ class App extends Component {
     this.state = {
       loggedIn: false,
       email: null,
-      name: null
+      name: null,
+      role: null
     }
 
     this.updateUser = this.updateUser.bind(this)
   }
 
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
+    console.log('Update User: ', this.state)
   }
 
   render() {
@@ -33,7 +35,7 @@ class App extends Component {
     <Router>
       <div>
 
-        <TopNav/>
+        <TopNav updateUser={this.updateUser} loggedIn={this.state.loggedIn}/>
 
         <Switch>
           {/* <Route exact path="/" component={Login} /> */}
@@ -45,7 +47,7 @@ class App extends Component {
 
           {/* <Route component={NoMatch} /> */}
         </Switch>
-        {/* <Signup Signup={this.signup}/> */}
+       {/* <Signup Signup={this.signup}/>  */}
         <Login updateUser={this.updateUser}/>
       </div>
     </Router>

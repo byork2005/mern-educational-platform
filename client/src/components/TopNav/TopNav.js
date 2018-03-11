@@ -13,12 +13,12 @@ class TopNav extends Component {
         event.preventDefault()
         console.log('logging out')
         axios.post('/api/users/logout').then(response => {
-          console.log(response.data)
           if (response.status === 200) {
             this.props.updateUser({
               loggedIn: false,
               username: null
             })
+            console.log('Logout success')
             this.setState({
                 redirectTo: '/'
             })
@@ -30,8 +30,7 @@ class TopNav extends Component {
 
     render() {
         const loggedIn = this.props.loggedIn;
-        console.log('navbar render, props: ')
-        console.log(this.props);
+        console.log('navbar render, props: ', this.props)
 
         return (
             <Navbar inverse collapseOnSelect>
@@ -67,8 +66,7 @@ class TopNav extends Component {
                         <MenuItem divider />
                         <MenuItem eventKey={3.3}>Log In</MenuItem>
                         <MenuItem divider />
-                        <MenuItem eventKey={3.4}><Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
-                                <span className="text-secondary">logout</span></Link></MenuItem>
+                        <MenuItem eventKey={3.4} onClick={this.logout}>Log Out</MenuItem>
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>

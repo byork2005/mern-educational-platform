@@ -44,13 +44,15 @@ module.exports = {
   login: function(req, res) {
          const userInfo = {
         email: req.user.email,
-        name: req.user.name }
+        name: req.user.name,
+        role: req.user.role }
       res.send(userInfo);
     // }
   },
 
   // Logs out the current user from the current session
   logout: function(req, res) {
+    console.log("logout controller: ", req.user)
     if(req.user) {
       req.logout()
       res.send({ msg: 'logging out'})
