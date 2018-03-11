@@ -46,7 +46,7 @@ class App extends Component {
           {/* <Route component={NoMatch} /> */}
         </Switch>
         {/* <Signup Signup={this.signup}/> */}
-        {/* <Login updateUser={this.updateUser}/> */}
+        <Login updateUser={this.updateUser}/>
       </div>
     </Router>
     )

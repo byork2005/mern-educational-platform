@@ -31,7 +31,6 @@ class Login extends Component {
             })
             .then(response => {
                 console.log('login response: ')
-                console.log(response.status)
                 console.log(response)
                 if (response.status === 200) {
                     // update App.js state
@@ -43,7 +42,8 @@ class Login extends Component {
                     // update the state to redirect to home
                     this.setState({
                         redirectTo: '/studenthome'
-                    })  
+                    })
+                    console.log('Current User: ', response.data.name + ': ' + response.data.email)
                 }
             }).catch(error => {
                 console.log('login error: ')

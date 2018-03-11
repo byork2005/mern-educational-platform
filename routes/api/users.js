@@ -46,5 +46,10 @@ router
   .route('/signup')
   .post(usersController.create)
 
+// Matches with api/users/logout
+router
+  .route('/logout')
+  .post(usersController.logout)
+
 module.exports = router;
 

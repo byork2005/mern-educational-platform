@@ -42,19 +42,21 @@ module.exports = {
   },
   // Authenticates user and logs them in
   login: function(req, res) {
-    // console.log('login working')
-    // res.redirect('/studenthome')
-    // passport.authenticate('local'),
-    // (req, res) => {
-    //   console.log('req', req);
-    //   const userInfo = {
-    //     email: req.user.email
-    //   };
          const userInfo = {
         email: req.user.email,
         name: req.user.name }
       res.send(userInfo);
     // }
+  },
+
+  // Logs out the current user from the current session
+  logout: function(req, res) {
+    if(req.user) {
+      req.logout()
+      res.send({ msg: 'logging out'})
+    } else {
+      res.send({ msg: 'no user to log out'})
+    }
   },
 
   update: function(req, res) {
