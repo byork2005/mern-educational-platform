@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 import {Row, Col, Well, Button} from 'react-bootstrap';
 import TopNav from "./components/TopNav";
 import TeacherClassPage from "./pages/Teacher/ClassPage";
@@ -58,6 +58,7 @@ class App extends Component {
         <TopNav updateUser={this.updateUser} loggedIn={this.state.loggedIn}/>
 
         <Switch>
+          <Redirect exact from="/" to="/welcome" />
           <Route path="/welcome" component={LandingPage} />
 
           <Route path="/studenthome" component={StudentHomePage} />
