@@ -19,7 +19,7 @@ const App = () => (
       <TopNav/>
 
       <Switch>
-        {/* <Route exact path="/" component={Login} /> */}
+        <Route exact path="/" component={Login} />
 
         <Route path="/studenthome" component={StudentHomePage} />
         <Route path="/teacherhome" component={TeacherHomePage} />
@@ -29,7 +29,7 @@ const App = () => (
         {/* <Route component={NoMatch} /> */}
       </Switch>
       {/* <Signup signup={this.signup}/> */}
-      <Login updateUser={this.updateUser}/>
+      {/* <Login updateUser={this.updateUser}/> */}
     </div>
   </Router>
 );
