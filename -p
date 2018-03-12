@@ -1,0 +1,6 @@
+MongoDB shell version v3.6.2
+connecting to: mongodb://ds111059.mlab.com:11059/edu_platform_db
+MongoDB server version: 3.4.13
+WARNING: shell and server versions do not match
+2018-03-11T14:10:15.723-0500 E -        [main] file [brandon] doesn't exist
+failed to load: brandon

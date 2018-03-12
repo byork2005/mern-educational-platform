@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TopNav from "./components/TopNav";
 import TeacherClassPage from "./pages/Teacher/ClassPage";
@@ -12,26 +12,47 @@ function handleSelect(selectedKey) {
   alert(`selected ${selectedKey}`);
 }
 
-const App = () => (
-  <Router>
-    <div>
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      loggedIn: false,
+      email: null,
+      name: null,
+      role: null
+    }
 
-      <TopNav/>
+    this.updateUser = this.updateUser.bind(this)
+  }
 
-      <Switch>
-        {/* <Route exact path="/" component={Login} /> */}
+  updateUser(userObject) {
+    this.setState(userObject)
+    console.log('Update User: ', this.state)
+  }
 
-        <Route path="/studenthome" component={StudentHomePage} />
-        <Route path="/teacherhome" component={TeacherHomePage} />
-        <Route path="/teacherclass" component={TeacherClassPage} />
-        <Route path="/studentclass" component={StudentClassPage} />
+  render() {
+    return (
+    <Router>
+      <div>
 
-        {/* <Route component={NoMatch} /> */}
-      </Switch>
-      <Signup Signup={this.signup}/>
-      <Login updateUser={this.updateUser}/>
-    </div>
-  </Router>
-);
+        <TopNav updateUser={this.updateUser} loggedIn={this.state.loggedIn}/>
+
+        <Switch>
+          {/* <Route exact path="/" component={Login} /> */}
+
+          <Route path="/studenthome" component={StudentHomePage} />
+          <Route path="/teacherhome" component={TeacherHomePage} />
+          <Route path="/teacherclass" component={TeacherClassPage} />
+          <Route path="/studentclass" component={StudentClassPage} />
+
+          {/* <Route component={NoMatch} /> */}
+        </Switch>
+       {/* <Signup Signup={this.signup}/>  */}
+        <Login updateUser={this.updateUser}/>
+      </div>
+    </Router>
+    )
+  }
+}
 
 export default App;

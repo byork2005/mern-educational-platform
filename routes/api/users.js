@@ -34,13 +34,22 @@ router
 //   }
 // );
 
-router
-  .route('/login')
-  .post(usersController.login)
+// router
+//   .route('/login')
+//   .post(usersController.login)
+
+
+router.post('/login', passport.authenticate('local', {failureRedirect: '/logout' }), usersController.login)
 
 // Matches with api/users/signup
 router
   .route('/signup')
   .post(usersController.create)
 
+// Matches with api/users/logout
+router
+  .route('/logout')
+  .post(usersController.logout)
+
 module.exports = router;
+
