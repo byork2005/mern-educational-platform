@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Row, Col} from 'react-bootstrap';
 import GradebookTable from "../../../components/Gradebook";
 import Dashboard from "../../../components/Dashboard";
-// import Sidebar from "../../components/Sidebar";
+import Assingments from "../../../components/Assingments";
+import CreateAssingment from "../../../components/CreateAssingment";
 import './style.css';
 
 const Sidebar = ({ matchedPath }) => (
@@ -21,14 +22,14 @@ const Sidebar = ({ matchedPath }) => (
               </Link>
             </li>
             <li>
-              <a href=""  >
+                <Link to={`${matchedPath}/assingments`}>
                   <i className="fa fa-folder-o fa-fw" /> &nbsp;Assingments
-              </a>
+                </Link>
             </li>
             <li>
-              <a href=""  >
+                <Link to={`${matchedPath}/create`}>
                   <i className="fa fa-edit fa-fw" /> &nbsp;Create Assingment
-              </a>
+                </Link>
             </li>
         </ul>
       </div>
@@ -54,11 +55,8 @@ class TeacherClassPage extends Component {
                         <Col xs={6} md={8}>
                             <Route exact path={`${this.props.match.url}/dashboard`} component={Dashboard} />
                             <Route exact path={`${this.props.match.url}/gradebook`} component={GradebookTable} />
-                            {/* <Dashboard /> */}
-                            {/* {!this.state.isHiddenDashboard && <Dashboard />}
-                            {!this.state.isHidden && <GradebookTable />} */}
-                            {/* <Route path="/teacherclass/dashboard" component={Dashboard} />
-                            <Route path="/teacherclass/gradebook" component={GradebookTable} /> */}
+                            <Route exact path={`${this.props.match.url}/assingments`} component={Assingments} />
+                            <Route exact path={`${this.props.match.url}/create`} component={CreateAssingment} />
                         </Col>
                         <Col xs={6} md={4}>
                         
