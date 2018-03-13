@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap';
+// import { ClassBanner } from "../../../components/Homepage";
 // import './style.css';
 
  class TeacherHomePage extends Component {
