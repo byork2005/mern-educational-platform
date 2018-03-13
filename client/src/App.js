@@ -68,7 +68,7 @@ class App extends Component {
           <Route path="/teacherclass" component={TeacherClassPage} />
           <Route path="/studentclass" component={StudentClassPage} />
           <Route path="/signup" render={ () => (<Signup Signup={this.signup}/>)}/>
-          <Route path="/login" render={ () => (<Login updateUser={this.updateUser} test={testthing}/>)} />
+          <Route path="/login" render={ () => (<Login updateUser={this.updateUser}/>)} />>
 
           {/* <Route component={NoMatch} /> */}
         </Switch>
