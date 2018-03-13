@@ -38,17 +38,27 @@ class Login extends Component {
                         name: response.data.name,
                         role: response.data.role
                     })
-                    // update the state to redirect to home
-                    this.setState({
-                        redirectTo: '/studenthome'
-                    })
+                    if(response.data.role === "student") {
+                        // update the state to redirect to studenthome
+                        this.setState({
+                            redirectTo: '/studenthome'
+                        })
+                    } else if(response.data.role === "teacher") {
+                        // update the state to redirect to teacherhome
+                        this.setState({
+                            redirectTo: '/teacherhome'
+                        })
+                    } else {
+                        // update the state to redirect to homepage
+                        this.setState({
+                            redirectTo: '/'
+                        })
+                    }
                 }
             }).catch(error => {
-                console.log('login error: ')
-                console.log(error);
-                
+                console.log('login error: ', error)
             })
-    }
+        }
 
     render() {
         if (this.state.redirectTo) {
