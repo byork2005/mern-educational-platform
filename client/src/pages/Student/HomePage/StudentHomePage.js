@@ -3,25 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap';
 // import './style.css';
 
-const AddBtn = () => {
-    return (
-        <Button bsStyle="primary" id="btn1" onClick={this.handleShow}>Add Class</Button> 
-    )
-}
-
-const Sidebar = ({props}) => (
-    <div className="navbar-default sidebar" style={{ marginLeft: '-20px' }} role="navigation">
-      <div className="sidebar-nav navbar-collapse collapse">
-        <ul className="nav in" id="side-menu">
-          <li>
-          <Button bsStyle="primary" id="btn1" onClick={this.handleShow}>Add Class</Button>
-            </li>
-        </ul>
-      </div>
-    </div>
- );
-
- class TeacherHomePage extends Component {
+ class StudentHomePage extends Component {
     constructor (props, context) {
         super(props, context)
 
@@ -122,4 +104,4 @@ const Sidebar = ({props}) => (
 
 }
 
-export default TeacherHomePage;
+export default StudentHomePage;
