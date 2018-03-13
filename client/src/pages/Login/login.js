@@ -66,7 +66,7 @@ class Login extends Component {
         } else {
             return (
                 <div align="center">
-                    <h4>Login</h4>
+                    <h4>{this.props.testthing}</h4>
                     <form className="form-horizontal">
                         <div className="form-group">
                             <div className="col-1 col-ml-auto">
