@@ -10,6 +10,8 @@ import Signup from "./pages/Login/sign-up.js";
 import Login from "./pages/Login/login.js";
 import LandingPage from "./pages/Login/landing.js";
 
+let testthing;
+
 function handleSelect(selectedKey) {
   alert(`selected ${selectedKey}`);
 }
@@ -41,7 +43,6 @@ class App extends Component {
       name: null,
       role: null
     }
-
     this.updateUser = this.updateUser.bind(this)
   }
 
@@ -51,6 +52,7 @@ class App extends Component {
   }
 
   render() {
+    testthing = "TEST STRING TO PASS GAS"
     return (
     <Router>
       <div>
@@ -61,12 +63,12 @@ class App extends Component {
           <Redirect exact from="/" to="/welcome" />
           <Route path="/welcome" component={LandingPage} />
 
-          <Route path="/studenthome" component={StudentHomePage} />
+          <Route updateUser={this.state} path="/studenthome" component={StudentHomePage} />
           <Route path="/teacherhome" component={TeacherHomePage} />
           <Route path="/teacherclass" component={TeacherClassPage} />
           <Route path="/studentclass" component={StudentClassPage} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
+          <Route path="/signup" render={ () => (<Signup Signup={this.signup}/>)}/>
+          <Route path="/login" render={ () => (<Login updateUser={this.updateUser} test={testthing}/>)} />
 
           {/* <Route component={NoMatch} /> */}
         </Switch>
