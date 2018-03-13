@@ -88,7 +88,7 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                                         <FormControl
                                             type="text"
                                             value={this.state.name}
-                                            placeholder="Enter Code"
+                                            placeholder="Class Name"
                                             onChange={this.handleChange}
                                         />
                                         <FormControl.Feedback />
@@ -96,7 +96,7 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                                         <FormControl
                                             type="text"
                                             value={this.state.teacher}
-                                            placeholder="Enter Code"
+                                            placeholder="Teacher Name"
                                             onChange={this.handleChange}
                                         />
                                         <FormControl.Feedback />
@@ -104,7 +104,7 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                                         <FormControl
                                             type="text"
                                             value={this.state.schedule}
-                                            placeholder="Enter Code"
+                                            placeholder="Class Schedule"
                                             onChange={this.handleChange}
                                         />
                                         <FormControl.Feedback />
@@ -112,7 +112,7 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                                         <FormControl
                                             type="text"
                                             value={this.state.location}
-                                            placeholder="Enter Code"
+                                            placeholder="Classroom"
                                             onChange={this.handleChange}
                                         />
                                         <FormControl.Feedback />
