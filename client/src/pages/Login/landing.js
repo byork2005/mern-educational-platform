@@ -5,7 +5,7 @@ import Signup from "./sign-up.js";
 import Login from "./login.js";
 import "./style.css";
 
-const WelcomePanel = ({matchPath}) => (
+const WelcomePanel = () => (
     <Well>
         <Row>
             <h1 id="welcomeHeader">Welcome</h1>
@@ -13,12 +13,12 @@ const WelcomePanel = ({matchPath}) => (
         <Row>
             <Col xs={4} md={2}></Col>
             <Col xs={4} md={4}>
-                    <Link to={`${matchPath}/login`}>
+                    <Link to="/login">
                         <Button bsStyle="primary" id="btn1">Login</Button> 
                     </Link>
             </Col>
             <Col xs={4} md={4}>
-                    <Link to={`${matchPath}/signup`}>
+                    <Link to="/signup">
                         <Button bsStyle="success" id="btn2">Sign Up</Button>
                     </Link>
             </Col>
@@ -52,7 +52,7 @@ class LandingPage extends Component {
                     <Col xs={4} md={4}>
                     </Col>
                     <Col xs={4} md={4}>
-                        <WelcomePanel matchPath={this.props.match.url}/>
+                        <WelcomePanel/>
                         <Route path={`${this.props.match.url}/login`} component={Login} />
                         <Route path={`${this.props.match.url}/signup`} component={Signup} />
                     </Col>
