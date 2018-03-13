@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Row, Col, Well, Button} from 'react-bootstrap';
 import Signup from "./sign-up.js";
 import Login from "./login.js";
+import Success from "./success.js";
 import "./style.css";
 
 const WelcomePanel = ({matchPath}) => (
@@ -55,6 +56,7 @@ class LandingPage extends Component {
                         <WelcomePanel matchPath={this.props.match.url}/>
                         <Route path={`${this.props.match.url}/login`} component={Login} />
                         <Route path={`${this.props.match.url}/signup`} component={Signup} />
+                        <Route path={`${this.props.match.url}/success`} component={Success} />
                     </Col>
                     <Col xs={4} md={4}>
                     </Col>
