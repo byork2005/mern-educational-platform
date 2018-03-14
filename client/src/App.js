@@ -63,7 +63,7 @@ class App extends Component {
           <Redirect exact from="/" to="/welcome" />
           <Route path="/welcome" component={LandingPage} />
 
-          <Route updateUser={this.state} path="/studenthome" component={StudentHomePage} />
+          <Route path="/studenthome" render={()=><StudentHomePage email={this.state.email} loggedin={this.state.loggedIn}/>}/>
           <Route path="/teacherhome" component={TeacherHomePage} />
           <Route path="/teacherclass" component={TeacherClassPage} />
           <Route path="/studentclass" component={StudentClassPage} />
