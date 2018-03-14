@@ -35,8 +35,8 @@ function handleSelect(selectedKey) {
 // )
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       loggedIn: false,
       email: null,
@@ -45,6 +45,7 @@ class App extends Component {
     }
     this.updateUser = this.updateUser.bind(this)
   }
+  
 
   updateUser(userObject) {
     this.setState(userObject)
@@ -52,18 +53,17 @@ class App extends Component {
   }
 
   render() {
-    testthing = "TEST STRING TO PASS GAS"
     return (
     <Router>
       <div>
 
-        <TopNav updateUser={this.updateUser} loggedIn={this.state.loggedIn}/>
+        <TopNav updateUser={this.updateUser} email={this.state.email} loggedIn={this.state.loggedIn}/>
 
         <Switch>
           <Redirect exact from="/" to="/welcome" />
+          <Route path="/studenthome" render={()=><StudentHomePage email={this.state.email} loggedin={this.state.loggedIn}/>}/>
           <Route path="/welcome" component={LandingPage} />
-
-          <Route updateUser={this.state} path="/studenthome" component={StudentHomePage} />
+          {/* <Route path="/studenthome"  component={StudentHomePage} /> */}
           <Route path="/teacherhome" component={TeacherHomePage} />
           <Route path="/teacherclass" component={TeacherClassPage} />
           <Route path="/studentclass" component={StudentClassPage} />

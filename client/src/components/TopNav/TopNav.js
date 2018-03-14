@@ -29,6 +29,8 @@ class TopNav extends Component {
       }
 
     render() {
+        const email = this.props.email;
+        console.log(email)
         const loggedIn = this.props.loggedIn;
         console.log('navbar render, props: ', this.props)
 

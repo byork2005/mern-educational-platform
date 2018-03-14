@@ -6,8 +6,8 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
 
  class StudentHomePage extends Component {
     constructor (props, context) {
+        console.log(props.role);
         super(props, context)
-
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -44,6 +44,7 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
     }
 
     render() {
+        console.log(this.props)
 
         const popover = (
             <Popover id="modal-popover" title="popover">
@@ -60,7 +61,7 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                             <div className="sidebar-nav navbar-collapse collapse">
                                 <ul className="nav in" id="side-menu">
                                 <li>
-                                <Button bsStyle="primary" id="btn1" onClick={this.handleShow}>Add Class</Button>
+                                <Button bsStyle="primary" id="btn1" onClick={this.handleShow}>Add{this.props.email} Class</Button>
                                     </li>
                                 </ul>
                             </div>
