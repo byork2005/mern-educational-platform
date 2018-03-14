@@ -1,54 +1,7 @@
 import React, { Component } from 'react';
 import {Row, Col, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
-// import Form from "react-jsonschema-form";
 import './CreateAssingment.css';
 
-//test with the react-jsonschema-form
-
-// const schema = {
-//     title: "Todo",
-//     type: "object",
-//     required: ["title"],
-//     properties: {
-//       title: {type: "string", title: "Title", default: "A new task"},
-//       done: {type: "boolean", title: "Done?", default: false}
-//     }
-//   };
-   
-// const log = (type) => console.log.bind(console, type);
-
-// class CreateAssingment extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-        
-//         };
-//       }
-
-   
-
-//     render() {
-   
-
-//         return (
-//             <div>
-//                 <Row>
-//                    Create Shit Here
-//                 </Row>
-//                 <Form schema={schema}
-//                     onChange={log("changed")}
-//                     onSubmit={log("submitted")}
-//                     onError={log("errors")} />
-//                 <Row>
-                
-//                 </Row>
-//             </div>
-//         );
-//     }
-
-// }
-
-// export default CreateAssingment;
 
 //practice form
 class CreateAssingment extends React.Component {
@@ -193,22 +146,3 @@ class CreateAssingment extends React.Component {
 
 export default CreateAssingment;
 
-
-//put within for tags
-        // <label>
-        //     Is going:
-        //     <input
-        //       name="isGoing"
-        //       type="checkbox"
-        //       checked={this.state.isGoing}
-        //       onChange={this.handleInputChange} />
-        //   </label>
-        //   <br />
-        //   <label>
-        //     Number of guests:
-        //     <input
-        //       name="numberOfGuests"
-        //       type="number"
-        //       value={this.state.numberOfGuests}
-        //       onChange={this.handleInputChange} />
-        //   </label>
