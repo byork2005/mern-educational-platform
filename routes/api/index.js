@@ -2,9 +2,9 @@ const router = require("express").Router();
 
 const userRoutes = require("./users");
 const classroomRoutes = require("./classroom");
-const notesRoutes = require("/notes");
-const assignmentsRoutes = require("/assignments");
-const gradebookRoutes = require("/gradebook");
+const notesRoutes = require("./notes");
+const assignmentsRoutes = require("./assignments");
+const gradebookRoutes = require("./gradebook");
 
 // user routes
 router.use("/users", userRoutes);

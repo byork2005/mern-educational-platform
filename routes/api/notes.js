@@ -9,6 +9,7 @@ router.route("/")
   .delete(notesController.remove)
 
 // Matches with "/api/notes/id
+router
   .route("/id")
   .get(notesController.findById)
   .put(notesController.update)

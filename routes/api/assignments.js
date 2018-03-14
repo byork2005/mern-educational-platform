@@ -9,6 +9,7 @@ router.route("/")
   .delete(assignmentsController.remove)
 
 // Matches with "/api/assignments/id
+router
   .route("/id")
   .get(assignmentsController.findById)
   .put(assignmentsController.update)

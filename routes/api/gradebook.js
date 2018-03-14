@@ -9,6 +9,7 @@ router.route("/")
   .delete(gradebookController.remove)
 
 // Matches with "/api/gradebook/id
+router
   .route("/id")
   .get(gradebookController.findById)
   .put(gradebookController.update)
