@@ -30,12 +30,12 @@ class Signup extends Component {
 			role: this.state.role,
 		})
 			.then(response => {
-				console.log(response)
 				if (!response.data.errmsg) {
-					console.log('successful signup')
-					this.setState({ //redirect to login page
+					console.log('successful signup for ', response.data.name)
+					this.setState({
 						redirectTo: '/login'
 					})
+					console.log(this.setState())
 				} else {
 					console.log('email already taken')
 				}

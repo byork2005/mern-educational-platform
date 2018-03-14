@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
-    "concurrently": "^3.5.0",
+    "concurrently": "^3.5.1",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
