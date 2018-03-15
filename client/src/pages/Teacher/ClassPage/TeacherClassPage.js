@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import {Row, Col} from 'react-bootstrap';
 import GradebookTable from "../../../components/Gradebook";
 import Dashboard from "../../../components/Dashboard";
@@ -53,6 +53,7 @@ class TeacherClassPage extends Component {
                     </Col>
                     <Row>
                         <Col xs={6} md={8}>
+                            <Redirect exact from={`${this.props.match.url}`} to={`${this.props.match.url}/dashboard`} />
                             <Route exact path={`${this.props.match.url}/dashboard`} component={Dashboard} />
                             <Route exact path={`${this.props.match.url}/gradebook`} component={GradebookTable} />
                             <Route exact path={`${this.props.match.url}/assingments`} component={Assingments} />

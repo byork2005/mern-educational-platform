@@ -1,12 +1,41 @@
 import React from "react";
 import {Row, Col, Well} from 'react-bootstrap';
+import API from "../../../utils/API";
 
 
-const ClassInfo = () => 
-    <div>
-        <h1>World Regional Geopgraphy</h1>
-        <h3>Mrs. Spencer</h3>
-        <h3>M-F 1:45-2:30</h3>
-    </div>
+class ClassInfo extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            name: '',
+            teacher: '',
+            schedule: '',
+            location: ''
+        };    
+    };
+
+    // componentDidMount() {
+    //     this.loadClassInfo();
+    // };
+    
+    loadClass = () => {
+        API.getClasses()
+          .then(res =>
+            this.setState({ classes: res.data, name: "", teacher: "", schedule: "", location: "" })
+          )
+          .catch(err => console.log(err));
+    };
+
+    render() {
+        return (
+            <div>
+                <h1>{this.state.name}</h1>
+                <h3>{this.state.teacher}</h3>
+                <h3>{this.state.schedule}, {this.state.location}</h3>
+            </div>
+        )
+    }
+
+}
 
 export default ClassInfo;
