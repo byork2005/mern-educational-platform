@@ -17,7 +17,19 @@ class CreateAssingment extends React.Component {
         answer3:"",
         value3:false,      
         answer4:"",
-        value4:false      
+        value4:false,
+        
+        question1: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        }
       };
   
     //   this.handleChange = this.handleChange.bind(this);
@@ -37,6 +49,7 @@ class CreateAssingment extends React.Component {
         this.setState({
             [name]: value
           });
+          
 
         // console.log(this)
         // this.setState({question: event.target.question})
