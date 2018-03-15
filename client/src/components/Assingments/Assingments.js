@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Row, Col} from 'react-bootstrap';
 import './Assingments.css';
+import AssingmentContainer from './AssingmentContainer.js';
 
 class Assingments extends Component {
     constructor(props) {
@@ -17,13 +18,7 @@ class Assingments extends Component {
 
         return (
             <div>
-                <Row>
-                   Leave Shit Here
-                </Row>
-               
-                <Row>
-                
-                </Row>
+               <AssingmentContainer/>
             </div>
         );
     }

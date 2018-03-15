@@ -273,7 +273,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer1"
-                                        value={this.state.questions[0].answers[0].answer}
+                                        value={this.state.question[0].answers[0].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -284,7 +284,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[0].value}
+                                        checked={this.state.question[0].answers[0].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -292,7 +292,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[0].answers[1].answer}
+                                        value={this.state.question[0].answers[1].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -303,7 +303,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[1].value}
+                                        checked={this.state.question[0].answers[1].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -311,7 +311,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[0].answers[2].answer}
+                                        value={this.state.question[0].answers[2].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -322,7 +322,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[2].value}
+                                        checked={this.state.question[0].answers[2].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -330,7 +330,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[0].answers[3].answer}
+                                        value={this.state.question[0].answers[3].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -341,7 +341,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[3].value}
+                                        checked={this.state.question[0].answers[3].value}
                                         onChange={this.handleChange} />
                                 </Col>
                         
@@ -366,7 +366,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer1"
-                                        value={this.state.questions[1].answers[0].answer}
+                                        value={this.state.question[1].answers[0].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -377,7 +377,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[0].value}
+                                        checked={this.state.question[1].answers[0].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -385,7 +385,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[1].answers[1].answer}
+                                        value={this.state.question[1].answers[1].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -396,7 +396,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[1].value}
+                                        checked={this.state.question[1].answers[1].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -404,7 +404,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[1].answers[2].answer}
+                                        value={this.state.question[1].answers[2].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -415,7 +415,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[2].value}
+                                        checked={this.state.question[1].answers[2].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -423,7 +423,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[1].answers[3].answer}
+                                        value={this.state.question[1].answers[3].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -434,7 +434,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[3].value}
+                                        checked={this.state.question[1].answers[3].value}
                                         onChange={this.handleChange} />
                                 </Col>
                         </Row>
@@ -457,7 +457,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer1"
-                                        value={this.state.questions[2].answers[0].answer}
+                                        value={this.state.question[2].answers[0].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -468,7 +468,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[0].value}
+                                        checked={this.state.question[2].answers[0].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -476,7 +476,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[2].answers[1].answer}
+                                        value={this.state.question[2].answers[1].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -487,7 +487,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[1].value}
+                                        checked={this.state.question[2].answers[1].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -495,7 +495,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[2].answers[2].answer}
+                                        value={this.state.question[2].answers[2].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -506,7 +506,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[2].value}
+                                        checked={this.state.question[2].answers[2].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -514,7 +514,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[2].answers[3].answer}
+                                        value={this.state.question[2].answers[3].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -525,7 +525,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[3].value}
+                                        checked={this.state.question[2].answers[3].value}
                                         onChange={this.handleChange} />
                                 </Col>
                         </Row>
@@ -548,7 +548,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer1"
-                                    value={this.state.questions[3].answers[0].answer}
+                                    value={this.state.question[3].answers[0].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -559,7 +559,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[0].value}
+                                        checked={this.state.question[3].answers[0].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -567,7 +567,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[3].answers[1].answer}
+                                        value={this.state.question[3].answers[1].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -578,7 +578,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[1].value}
+                                        checked={this.state.question[3].answers[1].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -586,7 +586,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[3].answers[2].answer}
+                                        value={this.state.question[3].answers[2].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -597,7 +597,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[2].value}
+                                        checked={this.state.question[3].answers[2].value}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -605,7 +605,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[3].answers[3].answer}
+                                        value={this.state.question[3].answers[3].answer}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -616,7 +616,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[3].value}
+                                        checked={this.state.question[3].answers[3].value}
                                         onChange={this.handleChange} />
                                 </Col>
                         </Row>
@@ -639,7 +639,7 @@ class CreateAssingment extends React.Component {
                             <FormControl
                                 type="text"
                                 name="answer1"
-                                value={this.state.questions[4].answers[0].answer}
+                                value={this.state.question[4].answers[0].answer}
                                 placeholder="Enter text"
                                 onChange={this.handleChange}
                                 />
@@ -650,7 +650,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value1"
                                     type="checkbox"
-                                    checked={this.state.questions[4].answers[0].value}
+                                    checked={this.state.question[4].answers[0].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -658,7 +658,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer2"
-                                    value={this.state.questions[4].answers[1].answer}
+                                    value={this.state.question[4].answers[1].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -669,7 +669,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value2"
                                     type="checkbox"
-                                    checked={this.state.questions[4].answers[1].value}
+                                    checked={this.state.question[4].answers[1].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -677,7 +677,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer3"
-                                    value={this.state.questions[4].answers[2].answer}
+                                    value={this.state.question[4].answers[2].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -688,7 +688,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value3"
                                     type="checkbox"
-                                    checked={this.state.questions[4].answers[2].value}
+                                    checked={this.state.question[4].answers[2].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -696,7 +696,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer4"
-                                    value={this.state.questions[4].answers[3].answer}
+                                    value={this.state.question[4].answers[3].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -707,7 +707,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value4"
                                     type="checkbox"
-                                    checked={this.state.questions[4].answers[3].value}
+                                    checked={this.state.question[4].answers[3].value}
                                     onChange={this.handleChange} />
                             </Col>
                         </Row>
@@ -731,7 +731,7 @@ class CreateAssingment extends React.Component {
                             <FormControl
                                 type="text"
                                 name="answer1"
-                                value={this.state.questions[5].answers[0].answer}
+                                value={this.state.question[5].answers[0].answer}
                                 placeholder="Enter text"
                                 onChange={this.handleChange}
                                 />
@@ -742,7 +742,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value1"
                                     type="checkbox"
-                                    checked={this.state.questions[5].answers[0].value}
+                                    checked={this.state.question[5].answers[0].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -750,7 +750,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer2"
-                                    value={this.state.questions[5].answers[1].answer}
+                                    value={this.state.question[5].answers[1].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -761,7 +761,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value2"
                                     type="checkbox"
-                                    checked={this.state.questions[5].answers[1].value}
+                                    checked={this.state.question[5].answers[1].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -769,7 +769,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer3"
-                                    value={this.state.questions[5].answers[2].answer}
+                                    value={this.state.question[5].answers[2].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -780,7 +780,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value3"
                                     type="checkbox"
-                                    checked={this.state.questions[5].answers[2].value}
+                                    checked={this.state.question[5].answers[2].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -788,7 +788,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer4"
-                                    value={this.state.questions[5].answers[3].answer}
+                                    value={this.state.question[5].answers[3].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -799,7 +799,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value4"
                                     type="checkbox"
-                                    checked={this.state.questions[5].answers[3].value}
+                                    checked={this.state.question[5].answers[3].value}
                                     onChange={this.handleChange} />
                             </Col>
                         </Row>
@@ -822,7 +822,7 @@ class CreateAssingment extends React.Component {
                             <FormControl
                                 type="text"
                                 name="answer1"
-                                value={this.state.questions[0].answers[0].answer}
+                                value={this.state.question[0].answers[0].answer}
                                 placeholder="Enter text"
                                 onChange={this.handleChange}
                                 />
@@ -833,7 +833,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value1"
                                     type="checkbox"
-                                    checked={this.state.questions[6].answers[0].value}
+                                    checked={this.state.question[6].answers[0].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -841,7 +841,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer2"
-                                    value={this.state.questions[6].answers[1].answer}
+                                    value={this.state.question[6].answers[1].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -852,7 +852,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value2"
                                     type="checkbox"
-                                    checked={this.state.questions[6].answers[1].value}
+                                    checked={this.state.question[6].answers[1].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -860,7 +860,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer3"
-                                    value={this.state.questions[6].answers[2].answer}
+                                    value={this.state.question[6].answers[2].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -871,7 +871,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value3"
                                     type="checkbox"
-                                    checked={this.state.questions[6].answers[2].value}
+                                    checked={this.state.question[6].answers[2].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -879,7 +879,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer4"
-                                    value={this.state.questions[6].answers[3].answer}
+                                    value={this.state.question[6].answers[3].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -890,7 +890,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value4"
                                     type="checkbox"
-                                    checked={this.state.questions[6].answers[3].value}
+                                    checked={this.state.question[6].answers[3].value}
                                     onChange={this.handleChange} />
                             </Col>
                         </Row>
@@ -913,7 +913,7 @@ class CreateAssingment extends React.Component {
                             <FormControl
                                 type="text"
                                 name="answer1"
-                                value={this.state.questions[7].answers[0].answer}
+                                value={this.state.question[7].answers[0].answer}
                                 placeholder="Enter text"
                                 onChange={this.handleChange}
                                 />
@@ -924,7 +924,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value1"
                                     type="checkbox"
-                                    checked={this.state.questions[7].answers[0].value}
+                                    checked={this.state.question[7].answers[0].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -932,7 +932,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer2"
-                                    value={this.state.questions[7].answers[1].answer}
+                                    value={this.state.question[7].answers[1].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -943,7 +943,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value2"
                                     type="checkbox"
-                                    checked={this.state.questions[7].answers[1].value}
+                                    checked={this.state.question[7].answers[1].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -951,7 +951,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer3"
-                                    value={this.state.questions[7].answers[2].answer}
+                                    value={this.state.question[7].answers[2].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -962,7 +962,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value3"
                                     type="checkbox"
-                                    checked={this.state.questions[7].answers[2].value}
+                                    checked={this.state.question[7].answers[2].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -970,7 +970,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer4"
-                                    value={this.state.questions[7].answers[3].answer}
+                                    value={this.state.question[7].answers[3].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -981,7 +981,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value4"
                                     type="checkbox"
-                                    checked={this.state.questions[7].answers[3].value}
+                                    checked={this.state.question[7].answers[3].value}
                                     onChange={this.handleChange} />
                             </Col>
                         </Row>
@@ -1004,7 +1004,7 @@ class CreateAssingment extends React.Component {
                             <FormControl
                                 type="text"
                                 name="answer1"
-                                value={this.state.questions[8].answers[0].answer}
+                                value={this.state.question[8].answers[0].answer}
                                 placeholder="Enter text"
                                 onChange={this.handleChange}
                                 />
@@ -1015,7 +1015,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value1"
                                     type="checkbox"
-                                    checked={this.state.questions[8].answers[0].value}
+                                    checked={this.state.question[8].answers[0].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -1023,7 +1023,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer2"
-                                    value={this.state.questions[8].answers[1].answer}
+                                    value={this.state.question8[8].answers[1].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -1034,7 +1034,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value2"
                                     type="checkbox"
-                                    checked={this.state.questions[8].answers[1].value}
+                                    checked={this.state.question[8].answers[1].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -1042,7 +1042,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer3"
-                                    value={this.state.questions[8].answers[2].answer}
+                                    value={this.state.question[8].answers[2].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -1053,7 +1053,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value3"
                                     type="checkbox"
-                                    checked={this.state.questions[8].answers[2].value}
+                                    checked={this.state.question[8].answers[2].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -1061,7 +1061,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer4"
-                                    value={this.state.questions[8].answers[3].answer}
+                                    value={this.state.question[8].answers[3].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -1072,7 +1072,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value4"
                                     type="checkbox"
-                                    checked={this.state.questions[8].answers[3].value}
+                                    checked={this.state.question[8].answers[3].value}
                                     onChange={this.handleChange} />
                             </Col>
                         </Row>
@@ -1095,7 +1095,7 @@ class CreateAssingment extends React.Component {
                             <FormControl
                                 type="text"
                                 name="answer1"
-                                value={this.state.questions[9].answers[0].answer}
+                                value={this.state.question[9].answers[0].answer}
                                 placeholder="Enter text"
                                 onChange={this.handleChange}
                                 />
@@ -1106,7 +1106,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value1"
                                     type="checkbox"
-                                    checked={this.state.questions[9].answers[0].value}
+                                    checked={this.state.question[9].answers[0].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -1114,7 +1114,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer2"
-                                    value={this.state.questions[9].answers[1].answer}
+                                    value={this.state.question[9].answers[1].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -1125,7 +1125,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value2"
                                     type="checkbox"
-                                    checked={this.state.questions[9].answers[1].value}
+                                    checked={this.state.question[9].answers[1].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -1133,7 +1133,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer3"
-                                    value={this.state.questions[9].answers[2].answer}
+                                    value={this.state.question[9].answers[2].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -1144,7 +1144,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value3"
                                     type="checkbox"
-                                    checked={this.state.questions[9].answers[2].value}
+                                    checked={this.state.question[9].answers[2].value}
                                     onChange={this.handleChange} />
                             </Col>
                             <Col xs={8} md={8}>
@@ -1152,7 +1152,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                     type="text"
                                     name="answer4"
-                                    value={this.state.questions[9].answers[3].answer}
+                                    value={this.state.question[9].answers[3].answer}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -1163,7 +1163,7 @@ class CreateAssingment extends React.Component {
                                 <input
                                     name="value4"
                                     type="checkbox"
-                                    checked={this.state.questions[9].answers[3].value}
+                                    checked={this.state.question[9].answers[3].value}
                                     onChange={this.handleChange} />
                             </Col>
                         </Row>
