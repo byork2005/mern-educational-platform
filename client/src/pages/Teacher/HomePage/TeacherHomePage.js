@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {Row, Col, Button, Popover, Tooltip, Modal, Well, Media, Glyphicon, Form, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap';
 // import { ClassBanner } from "../../../components/Homepage";
 // import './style.css';
 
@@ -124,8 +124,21 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                             </Modal>
                         </Col>
                         <Col xs={6} md={4}>
+                    
                         
                         </Col>
+                        <Row className="show-grid">
+                            <Col xs={6} md={8}>
+                                 <Well bsSize="large">
+                                    <Media className="pull-left"><img className="media-object" alt="#" src="http://via.placeholder.com/150x150"/></Media>
+                                        <a href="/teacherclass"><h1>Modern World History</h1></a>
+                                        <p>The objective of this course is to the people, events, ideas, and places that have influenced and shaped the world from the late 1800s to present day.</p>
+                                        <span className="scores">
+                                        <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star-empty"/> <Glyphicon glyph="star-empty"/>
+                                        </span>
+                                </Well>
+                            </Col>
+                        </Row>
                     </Row>
                 </Row>
             </div>

@@ -33,7 +33,7 @@ class AssingmentContainer extends Component {
                         "value":false
                     }]},
                 {
-                "question": "Garvilo Princip, the man who shot Archduke Frans Ferdinad and sent Europe to war, was the member of a Slavic terrorist organization. Which of the following groups did he belong to?",
+                "question": "Gavrilo Princip, the man who shot Archduke Franz Ferdinand and sent Europe to war, was the member of a Slavic terrorist organization. Which of the following groups did he belong to?",
                 "answers": [
                     {
                         "answer":"The Black hand",
@@ -44,7 +44,7 @@ class AssingmentContainer extends Component {
                         "value":false
                     },
                     {
-                        "answer":"The Marguis",
+                        "answer":"The Maquis",
                         "value":false 
                     },
                     {
@@ -52,7 +52,7 @@ class AssingmentContainer extends Component {
                         "value":false
                     }]},
                     {
-                "question": "When Germany moved it's troops toward France, they avoided a straight path across the boarder, prefering to swing North through Belgium.  What was the name of this military strategy?",
+                "question": "When Germany moved it's troops toward France, they avoided a straight path across the border, preferring to swing North through Belgium.  What was the name of this military strategy?",
                 "answers": [
                     {
                         "answer":"North Route",
@@ -60,7 +60,7 @@ class AssingmentContainer extends Component {
                     },
                     {
                         "answer":"Belgium Plan",
-                        "value":true
+                        "value":false
                     },
                     {
                         "answer":"Normandy Swing",
@@ -68,10 +68,10 @@ class AssingmentContainer extends Component {
                     },
                     {
                         "answer":"The Schlieffen Plan",
-                        "value":false
+                        "value":true
                     }]},
                     {
-                "question": "During the first month of the war, Germany delve deep into France, almost capturing Paris.  However, the efforts of one group of Parisans helped keep them at bay.  What profession is attributed with making sure French soliders were in position to protect Paris?",
+                "question": "During the first month of the war, Germany delved deep into France, almost capturing Paris.  However, the efforts of one group of Parisans helped keep them at bay.  What profession is attributed with making sure French soliders were in position to protect Paris?",
                 "answers": [
                     {
                         "answer":"Barristas",
@@ -86,11 +86,11 @@ class AssingmentContainer extends Component {
                         "value":false  
                     },
                     {
-                        "answer":"Taci Drivers",
+                        "answer":"Taxi Drivers",
                         "value":true
                     }]},
                     {
-                "question": "Christmas of 1914 is remembered by a famous stopage in hostilities, as troops from both sides left their tenches and mingled. What did they famously do?",
+                "question": "Christmas of 1914 is remembered by a famous stopage in hostilities, as troops from both sides left their tenches and mingled. What did they famously play?",
                 "answers": [
                     {
                         "answer":"Soccer",
@@ -109,7 +109,7 @@ class AssingmentContainer extends Component {
                         "value":false
                     }]},
                     {
-                "question": "Currently known for his role in the popular movie Wonder Woman, this man became one of the co-leaders, along with Paul vn Hindenberg, of Germany's military efforts throughout the war.",
+                "question": "Currently known for his role in the popular movie Wonder Woman, this man became one of the co-leaders, along with Paul von Hindenberg, of Germany's military efforts throughout the war.",
                 "answers": [
                     {
                         "answer":"Eric Ludendorff",
@@ -128,7 +128,7 @@ class AssingmentContainer extends Component {
                         "value":false
                     }]},
                     {
-                "question": "One of the more famous military vehicles of the First World War, the German Zepplin began bombing London almost 30 years before Nazi Germany. Which of the following was a critcle compent of its construction?",
+                "question": "One of the more famous military vehicles of the First World War, the German Zepplin began bombing London almost 30 years before Nazi Germany. Which of the following was a critcal component of its construction?",
                 "answers": [
                     {
                         "answer":"50,000 Tons Aluminium",
@@ -147,7 +147,7 @@ class AssingmentContainer extends Component {
                         "value":false
                     }]},
                     {
-                "question": "The Western Front is most famous for the trenches which weaved across the contient.  At the height, what was the length of this front?",
+                "question": "The Western Front is most famous for the trenches which weaved across the continent.  At the height, what was the length of this front?",
                 "answers": [
                     {
                         "answer":"12,3000 km",
@@ -256,9 +256,10 @@ class AssingmentContainer extends Component {
                     <div>
                         <h1>{quiz.instructions}</h1>
                         <div>
-                            <p>Your score is {score}</p>
+                            <h3>Your score is {score} out of 10</h3>
+                            <p>Score will update once completed.</p>
                         </div>
-                        :
+                        
                         <div>
                             <h2>Question {index + 1} of {numberOfQuestions}</h2>
                             {quiz.questions && index < quiz.questions.length ?
