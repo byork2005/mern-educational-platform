@@ -32,8 +32,9 @@ class DateClock extends React.Component {
     render() {
       return (
         <Well className="clockWell">
+          <h1> Date and Time: </h1>
             <p className="App-clock">
-            The time is {this.state.time}.
+             {this.state.time}.
             </p>
         </Well>
       );

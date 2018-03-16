@@ -36,6 +36,8 @@ const Sidebar = ({ matchedPath }) => (
     </div>
  );
 
+ 
+
 class TeacherClassPage extends Component {
     constructor (props) {
         super(props)
