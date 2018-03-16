@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Row, Col, FormGroup, ControlLabel, FormControl, Carousel } from 'react-bootstrap';
+import { BrowserRouter as Link } from "react-router-dom";
 import './CreateAssingment.css';
 import './style.css';
 
@@ -9,204 +10,125 @@ class CreateAssingment extends React.Component {
       super(props);
       this.state = {
         instructions:"",
-        questions: [
-            {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-            {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]},
-                {
-            question: "",
-            answers: [
-                {
-                    answer:"",
-                    value:false, 
-                },
-                {
-                    answer:"",
-                    value:false,
-                },
-                {
-                    answer:"",
-                    value:false,  
-                },
-                {
-                    answer:"",
-                    value:false,
-                }]}
-           ],
-        };
+        question1: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question2: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question3: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question4: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question5: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question6: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question7: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question8: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question9: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        },
+        question10: {
+            question:"",
+            answer1:"",
+            value1:false,      
+            answer2:"",
+            value2:false,      
+            answer3:"",
+            value3:false,      
+            answer4:"",
+            value4:false,
+        }
+      };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    };
-
+      
+  
+  
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+      
+    }
     //this is a sunction to create an array, right now when it is called it 
     //breaks the dom
     convertObjQuestionsToArr() {
@@ -229,6 +151,8 @@ class CreateAssingment extends React.Component {
         // event.convertObjQuestionsToArr();
         event.preventDefault();
         console.log(this.state)
+        alert("Assingment Created.  Please return to Dashboard")
+        
         // console.log(event.convertObjQuestionsToArr());
       }
   
@@ -261,7 +185,7 @@ class CreateAssingment extends React.Component {
                             <FormControl
                                     type="text"
                                     name="question1"
-                                    value={this.state.questions[0].question}
+                                    value={this.state.question1.question}
                                     placeholder="Enter text"
                                     onChange={this.handleChange}
                                     />
@@ -273,7 +197,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer1"
-                                        value={this.state.questions[0].answers[0].answer}
+                                        value={this.state.question1.answer1}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -284,7 +208,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[0].value}
+                                        checked={this.state.question1.value1}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -292,7 +216,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[0].answers[1].answer}
+                                        value={this.state.question1.answer2}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -303,7 +227,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[1].value}
+                                        checked={this.state.question1.value2}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -311,7 +235,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[0].answers[2].answer}
+                                        value={this.state.question1.answer3}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -322,7 +246,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[2].value}
+                                        checked={this.state.question1.value3}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -330,7 +254,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[0].answers[3].answer}
+                                        value={this.state.question1.answer4}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -341,7 +265,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[0].answers[3].value}
+                                        checked={this.state.question1.value4}
                                         onChange={this.handleChange} />
                                 </Col>
                         
@@ -354,7 +278,7 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question2"
-                                        value={this.state.questions[1].question}
+                                        value={this.state.question2.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -366,7 +290,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer1"
-                                        value={this.state.questions[1].answers[0].answer}
+                                        value={this.state.question2.answer1}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -377,7 +301,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[0].value}
+                                        checked={this.state.question2.value1}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -385,7 +309,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[1].answers[1].answer}
+                                        value={this.state.question2.answer2}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -396,7 +320,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[1].value}
+                                        checked={this.state.question2.value2}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -404,7 +328,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[1].answers[2].answer}
+                                        value={this.state.question2.answer3}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -415,7 +339,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[2].value}
+                                        checked={this.state.question2.value3}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -423,7 +347,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[1].answers[3].answer}
+                                        value={this.state.question2.answer4}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -434,7 +358,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[1].answers[3].value}
+                                        checked={this.state.question2.value4}
                                         onChange={this.handleChange} />
                                 </Col>
                         </Row>
@@ -445,19 +369,19 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question3"
-                                        value={this.state.questions[2].question}
+                                        value={this.state.question3.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
+                                <Col xs={8} md={8}>
                                     <ControlLabel>Answer 1</ControlLabel>
                                     <FormControl
                                         type="text"
                                         name="answer1"
-                                        value={this.state.questions[2].answers[0].answer}
+                                        value={this.state.question3.answer1}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -468,7 +392,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[0].value}
+                                        checked={this.state.question3.value1}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -476,7 +400,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[2].answers[1].answer}
+                                        value={this.state.question3.answer2}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -487,7 +411,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[1].value}
+                                        checked={this.state.question3.value2}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -495,7 +419,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[2].answers[2].answer}
+                                        value={this.state.question3.answer3}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -506,7 +430,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[2].value}
+                                        checked={this.state.question3.value3}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -514,7 +438,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[2].answers[3].answer}
+                                        value={this.state.question3.answer4}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -525,7 +449,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[2].answers[3].value}
+                                        checked={this.state.question3.value4}
                                         onChange={this.handleChange} />
                                 </Col>
                         </Row>
@@ -536,30 +460,30 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question4"
-                                        value={this.state.questions[3].question}
+                                        value={this.state.question4.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 1</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer1"
-                                    value={this.state.questions[3].answers[0].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 1</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer1"
+                                        value={this.state.question4.answer1}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
                                 </Col>
                                 <Col xs={2} md={2}>
                                     <ControlLabel>Correct Answer?</ControlLabel>
                                     <input
                                         name="value1"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[0].value}
+                                        checked={this.state.question4.value1}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -567,7 +491,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer2"
-                                        value={this.state.questions[3].answers[1].answer}
+                                        value={this.state.question4.answer2}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -578,7 +502,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value2"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[1].value}
+                                        checked={this.state.question4.value2}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -586,7 +510,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer3"
-                                        value={this.state.questions[3].answers[2].answer}
+                                        value={this.state.question4.answer3}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -597,7 +521,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value3"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[2].value}
+                                        checked={this.state.question4.value3}
                                         onChange={this.handleChange} />
                                 </Col>
                                 <Col xs={8} md={8}>
@@ -605,7 +529,7 @@ class CreateAssingment extends React.Component {
                                     <FormControl
                                         type="text"
                                         name="answer4"
-                                        value={this.state.questions[3].answers[3].answer}
+                                        value={this.state.question4.answer4}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
@@ -616,7 +540,7 @@ class CreateAssingment extends React.Component {
                                     <input
                                         name="value4"
                                         type="checkbox"
-                                        checked={this.state.questions[3].answers[3].value}
+                                        checked={this.state.question4.value4}
                                         onChange={this.handleChange} />
                                 </Col>
                         </Row>
@@ -627,89 +551,89 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question5"
-                                        value={this.state.questions[4].question}
+                                        value={this.state.question5.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
-                            <ControlLabel>Answer 1</ControlLabel>
-                            <FormControl
-                                type="text"
-                                name="answer1"
-                                value={this.state.questions[4].answers[0].answer}
-                                placeholder="Enter text"
-                                onChange={this.handleChange}
-                                />
-                            <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value1"
-                                    type="checkbox"
-                                    checked={this.state.questions[4].answers[0].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 2</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer2"
-                                    value={this.state.questions[4].answers[1].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value2"
-                                    type="checkbox"
-                                    checked={this.state.questions[4].answers[1].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 3</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer3"
-                                    value={this.state.questions[4].answers[2].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value3"
-                                    type="checkbox"
-                                    checked={this.state.questions[4].answers[2].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 4</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer4"
-                                    value={this.state.questions[4].answers[3].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value4"
-                                    type="checkbox"
-                                    checked={this.state.questions[4].answers[3].value}
-                                    onChange={this.handleChange} />
-                            </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 1</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer1"
+                                        value={this.state.question5.answer1}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value1"
+                                        type="checkbox"
+                                        checked={this.state.question5.value1}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 2</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer2"
+                                        value={this.state.question5.answer2}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value2"
+                                        type="checkbox"
+                                        checked={this.state.question5.value2}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 3</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer3"
+                                        value={this.state.question5.answer3}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value3"
+                                        type="checkbox"
+                                        checked={this.state.question5.value3}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 4</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer4"
+                                        value={this.state.question5.answer4}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value4"
+                                        type="checkbox"
+                                        checked={this.state.question5.value4}
+                                        onChange={this.handleChange} />
+                                </Col>
                         </Row>
 
                         <hr/>
@@ -719,89 +643,89 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question6"
-                                        value={this.state.questions[5].question}
+                                        value={this.state.question6.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
-                            <ControlLabel>Answer 1</ControlLabel>
-                            <FormControl
-                                type="text"
-                                name="answer1"
-                                value={this.state.questions[5].answers[0].answer}
-                                placeholder="Enter text"
-                                onChange={this.handleChange}
-                                />
-                            <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value1"
-                                    type="checkbox"
-                                    checked={this.state.questions[5].answers[0].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 2</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer2"
-                                    value={this.state.questions[5].answers[1].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value2"
-                                    type="checkbox"
-                                    checked={this.state.questions[5].answers[1].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 3</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer3"
-                                    value={this.state.questions[5].answers[2].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value3"
-                                    type="checkbox"
-                                    checked={this.state.questions[5].answers[2].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 4</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer4"
-                                    value={this.state.questions[5].answers[3].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value4"
-                                    type="checkbox"
-                                    checked={this.state.questions[5].answers[3].value}
-                                    onChange={this.handleChange} />
-                            </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 1</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer1"
+                                        value={this.state.question6.answer1}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value1"
+                                        type="checkbox"
+                                        checked={this.state.question6.value1}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 2</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer2"
+                                        value={this.state.question6.answer2}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value2"
+                                        type="checkbox"
+                                        checked={this.state.question6.value2}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 3</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer3"
+                                        value={this.state.question6.answer3}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value3"
+                                        type="checkbox"
+                                        checked={this.state.question6.value3}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 4</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer4"
+                                        value={this.state.question6.answer4}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value4"
+                                        type="checkbox"
+                                        checked={this.state.question6.value4}
+                                        onChange={this.handleChange} />
+                                </Col>
                         </Row>
                         <hr/>
                         <Row>
@@ -810,89 +734,89 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question7"
-                                        value={this.state.questions[6].question}
+                                        value={this.state.question7.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
-                            <ControlLabel>Answer 1</ControlLabel>
-                            <FormControl
-                                type="text"
-                                name="answer1"
-                                value={this.state.questions[0].answers[0].answer}
-                                placeholder="Enter text"
-                                onChange={this.handleChange}
-                                />
-                            <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value1"
-                                    type="checkbox"
-                                    checked={this.state.questions[6].answers[0].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 2</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer2"
-                                    value={this.state.questions[6].answers[1].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value2"
-                                    type="checkbox"
-                                    checked={this.state.questions[6].answers[1].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 3</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer3"
-                                    value={this.state.questions[6].answers[2].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value3"
-                                    type="checkbox"
-                                    checked={this.state.questions[6].answers[2].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 4</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer4"
-                                    value={this.state.questions[6].answers[3].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value4"
-                                    type="checkbox"
-                                    checked={this.state.questions[6].answers[3].value}
-                                    onChange={this.handleChange} />
-                            </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 1</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer1"
+                                        value={this.state.question7.answer1}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value1"
+                                        type="checkbox"
+                                        checked={this.state.question7.value1}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 2</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer2"
+                                        value={this.state.question7.answer2}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value2"
+                                        type="checkbox"
+                                        checked={this.state.question7.value2}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 3</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer3"
+                                        value={this.state.question7.answer3}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value3"
+                                        type="checkbox"
+                                        checked={this.state.question7.value3}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 4</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer4"
+                                        value={this.state.question7.answer4}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value4"
+                                        type="checkbox"
+                                        checked={this.state.question7.value4}
+                                        onChange={this.handleChange} />
+                                </Col>
                         </Row>
                         <hr/>
                         <Row>
@@ -901,89 +825,89 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question8"
-                                        value={this.state.questions[7].question}
+                                        value={this.state.question6.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
-                            <ControlLabel>Answer 1</ControlLabel>
-                            <FormControl
-                                type="text"
-                                name="answer1"
-                                value={this.state.questions[7].answers[0].answer}
-                                placeholder="Enter text"
-                                onChange={this.handleChange}
-                                />
-                            <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value1"
-                                    type="checkbox"
-                                    checked={this.state.questions[7].answers[0].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 2</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer2"
-                                    value={this.state.questions[7].answers[1].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value2"
-                                    type="checkbox"
-                                    checked={this.state.questions[7].answers[1].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 3</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer3"
-                                    value={this.state.questions[7].answers[2].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value3"
-                                    type="checkbox"
-                                    checked={this.state.questions[7].answers[2].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 4</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer4"
-                                    value={this.state.questions[7].answers[3].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value4"
-                                    type="checkbox"
-                                    checked={this.state.questions[7].answers[3].value}
-                                    onChange={this.handleChange} />
-                            </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 1</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer1"
+                                        value={this.state.question8.answer1}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value1"
+                                        type="checkbox"
+                                        checked={this.state.question8.value1}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 2</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer2"
+                                        value={this.state.question8.answer2}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value2"
+                                        type="checkbox"
+                                        checked={this.state.question8.value2}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 3</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer3"
+                                        value={this.state.question8.answer3}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value3"
+                                        type="checkbox"
+                                        checked={this.state.question8.value3}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 4</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer4"
+                                        value={this.state.question8.answer4}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value4"
+                                        type="checkbox"
+                                        checked={this.state.question8.value4}
+                                        onChange={this.handleChange} />
+                                </Col>
                         </Row>
                         <hr/>
                         <Row>
@@ -992,89 +916,89 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question9"
-                                        value={this.state.questions[8].question}
+                                        value={this.state.question9.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
-                            <ControlLabel>Answer 1</ControlLabel>
-                            <FormControl
-                                type="text"
-                                name="answer1"
-                                value={this.state.questions[8].answers[0].answer}
-                                placeholder="Enter text"
-                                onChange={this.handleChange}
-                                />
-                            <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value1"
-                                    type="checkbox"
-                                    checked={this.state.questions[8].answers[0].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 2</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer2"
-                                    value={this.state.questions[8].answers[1].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value2"
-                                    type="checkbox"
-                                    checked={this.state.questions[8].answers[1].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 3</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer3"
-                                    value={this.state.questions[8].answers[2].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value3"
-                                    type="checkbox"
-                                    checked={this.state.questions[8].answers[2].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 4</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer4"
-                                    value={this.state.questions[8].answers[3].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value4"
-                                    type="checkbox"
-                                    checked={this.state.questions[8].answers[3].value}
-                                    onChange={this.handleChange} />
-                            </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 1</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer1"
+                                        value={this.state.question9.answer1}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value1"
+                                        type="checkbox"
+                                        checked={this.state.question9.value1}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 2</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer2"
+                                        value={this.state.question9.answer2}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value2"
+                                        type="checkbox"
+                                        checked={this.state.question9.value2}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 3</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer3"
+                                        value={this.state.question9.answer3}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value3"
+                                        type="checkbox"
+                                        checked={this.state.question9.value3}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 4</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer4"
+                                        value={this.state.question9.answer4}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value4"
+                                        type="checkbox"
+                                        checked={this.state.question9.value4}
+                                        onChange={this.handleChange} />
+                                </Col>
                         </Row>
                         <hr/>
                         <Row>
@@ -1083,96 +1007,98 @@ class CreateAssingment extends React.Component {
                                 <FormControl
                                         type="text"
                                         name="question10"
-                                        value={this.state.questions[9].question}
+                                        value={this.state.question10.question}
                                         placeholder="Enter text"
                                         onChange={this.handleChange}
                                         />
                                 <FormControl.Feedback />
                                 </Col>
                             <hr/>
-                            <Col xs={8} md={8}>
-                            <ControlLabel>Answer 1</ControlLabel>
-                            <FormControl
-                                type="text"
-                                name="answer1"
-                                value={this.state.questions[9].answers[0].answer}
-                                placeholder="Enter text"
-                                onChange={this.handleChange}
-                                />
-                            <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value1"
-                                    type="checkbox"
-                                    checked={this.state.questions[9].answers[0].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 2</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer2"
-                                    value={this.state.questions[9].answers[1].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value2"
-                                    type="checkbox"
-                                    checked={this.state.questions[9].answers[1].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 3</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer3"
-                                    value={this.state.questions[9].answers[2].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value3"
-                                    type="checkbox"
-                                    checked={this.state.questions[9].answers[2].value}
-                                    onChange={this.handleChange} />
-                            </Col>
-                            <Col xs={8} md={8}>
-                                <ControlLabel>Answer 4</ControlLabel>
-                                <FormControl
-                                    type="text"
-                                    name="answer4"
-                                    value={this.state.questions[9].answers[3].answer}
-                                    placeholder="Enter text"
-                                    onChange={this.handleChange}
-                                    />
-                                <FormControl.Feedback />
-                            </Col>
-                            <Col xs={2} md={2}>
-                                <ControlLabel>Correct Answer?</ControlLabel>
-                                <input
-                                    name="value4"
-                                    type="checkbox"
-                                    checked={this.state.questions[9].answers[3].value}
-                                    onChange={this.handleChange} />
-                            </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 1</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer1"
+                                        value={this.state.question10.answer1}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value1"
+                                        type="checkbox"
+                                        checked={this.state.question10.value1}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 2</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer2"
+                                        value={this.state.question10.answer2}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value2"
+                                        type="checkbox"
+                                        checked={this.state.question10.value2}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 3</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer3"
+                                        value={this.state.question10.answer3}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value3"
+                                        type="checkbox"
+                                        checked={this.state.question10.value3}
+                                        onChange={this.handleChange} />
+                                </Col>
+                                <Col xs={8} md={8}>
+                                    <ControlLabel>Answer 4</ControlLabel>
+                                    <FormControl
+                                        type="text"
+                                        name="answer4"
+                                        value={this.state.question10.answer4}
+                                        placeholder="Enter text"
+                                        onChange={this.handleChange}
+                                        />
+                                    <FormControl.Feedback />
+                                </Col>
+                                <Col xs={2} md={2}>
+                                    <ControlLabel>Correct Answer?</ControlLabel>
+                                    <input
+                                        name="value4"
+                                        type="checkbox"
+                                        checked={this.state.question10.value4}
+                                        onChange={this.handleChange} />
+                                </Col>
                         </Row>
                     </div>
                             
                 </Row>
                 <Row>
                     <hr/>
+                    
                     <input type="submit" value="Submit" />  
+                    
                 </Row>
             {/* </div> */}
         </form>
@@ -1181,4 +1107,5 @@ class CreateAssingment extends React.Component {
   }
 
 export default CreateAssingment;
+
 
