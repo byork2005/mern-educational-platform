@@ -24,34 +24,13 @@ router
   .put(usersController.update)
   .delete(usersController.remove);
 
-// Need to dive into issue of login route vs sign-up route. Probably need to make sign-up
-// The log of req.body below works. Current error is 400, bad request.
-// router.post(
-//   '/login',
-//   function(req, res, next) {
-//     console.log('hello');
-//     console.log(req.body);
-//     next();
-//   },
-//   passport.authenticate('local'),
-//   (req, res) => {
-//     console.log('req', req);
-//     const userInfo = {
-//       email: req.user.email
-//     };
-//     res.send(userInfo);
-//   }
-// );
-
-// router
-//   .route('/login')
-//   .post(usersController.login)
-
-
+// Don't Delete: may need to revert back to this.
 // router.post('/login', passport.authenticate('local', {failureRedirect: '/logout' }), usersController.login)
 
 router
-  .route('/login', usersController.login)
+  .route('/login')
+  .post(usersController.login)
+
 
 
 // Matches with api/users/signup

@@ -41,13 +41,13 @@ module.exports = {
     })  
   },
   // Authenticates user and logs them in
-  login: function(req, res) {
-         const userInfo = {
-        email: req.user.email,
-        name: req.user.name,
-        role: req.user.role }
-      res.send(userInfo);
-  },
+  // login: function(req, res) {
+  //        const userInfo = {
+  //       email: req.user.email,
+  //       name: req.user.name,
+  //       role: req.user.role }
+  //     res.send(userInfo);
+  // },
 
   login: () => {
     (req, res, next) => {

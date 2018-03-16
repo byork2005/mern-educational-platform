@@ -4,7 +4,6 @@ const apiRoutes = require('./api');
 
 // API Routes
 router.use('/api', apiRoutes);
-console.log('api: ', router);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
