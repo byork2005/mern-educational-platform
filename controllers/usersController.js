@@ -47,7 +47,21 @@ module.exports = {
         name: req.user.name,
         role: req.user.role }
       res.send(userInfo);
-    // }
+  },
+
+  login: () => {
+    (req, res, next) => {
+      console.log('login, req.body', req.body);
+      next()
+    },
+    passport.authenticate('local'),
+    (req, res) => {
+      console.log('logged in', req. user);
+      var userInfo = {
+        email: req.user.email
+      };
+      res.send(userInfo);
+    }
   },
 
   // Logs out the current user from the current session

@@ -3,10 +3,19 @@ const usersController = require('../../controllers/usersController');
 const passport = require('../../passport');
 
 // Matches with "/api/users"
-router
-  .route('/')
-  // .get(usersController.findAll)
-  .get(() => {console.log('GET Hello')})
+// router
+//   .route('/')
+//   .get(usersController.getUser)
+
+  router.get('/', (req, res, next) => {
+    console.log('===== user!!======')
+    console.log(res.body)
+    // if (req.user) {
+    //     res.json({ user: req.user })
+    // } else {
+    //     res.json({ user: null })
+    // }
+})
 
 // Matches with "/api/users/:id"
 router
@@ -39,7 +48,11 @@ router
 //   .post(usersController.login)
 
 
-router.post('/login', passport.authenticate('local', {failureRedirect: '/logout' }), usersController.login)
+// router.post('/login', passport.authenticate('local', {failureRedirect: '/logout' }), usersController.login)
+
+router
+  .route('/login', usersController.login)
+
 
 // Matches with api/users/signup
 router

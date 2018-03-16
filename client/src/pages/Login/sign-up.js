@@ -8,7 +8,8 @@ class Signup extends Component {
 			name: '',
 			password: '',
 			role: 'student',
-			email: ''
+			email: '',
+			redirectTo: null
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)

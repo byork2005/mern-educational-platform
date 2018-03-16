@@ -9,6 +9,8 @@ import StudentHomePage from "./pages/Student/HomePage";
 import Signup from "./pages/Login/sign-up.js";
 import Login from "./pages/Login/login.js";
 import LandingPage from "./pages/Login/landing.js";
+import axios from 'axios'
+
 
 let testthing;
 
@@ -51,6 +53,24 @@ class App extends Component {
     console.log('Update User: ', this.state)
   }
 
+  getUser() {
+    axios.get('api/users/').then(response => {
+      console.log('Get user response: ', response.data)
+      if (response.data.user) {
+        console.log('Get User: There is a user saved in the server session: ', response.data.user)
+        this.setState({
+          loggedIn: true,
+          email: response.data.user.email
+        })
+      } else {
+        console.log('Get user: no user');
+        this.setState({
+          loggedIn: false,
+          username: null
+        })
+      }
+    })
+  }
   render() {
     testthing = "TEST STRING TO PASS GAS"
     return (
