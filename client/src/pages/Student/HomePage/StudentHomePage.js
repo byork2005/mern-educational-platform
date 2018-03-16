@@ -72,20 +72,8 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                             <Col xs={6} md={8}>
                                  <Well bsSize="large">
                                     <Media className="pull-left"><img className="media-object" alt="#" src="http://via.placeholder.com/150x150"/></Media>
-                                        <a href="/studentclass"><h1>History 101</h1></a>
-                                        <p>Incididunt quis non minim sunt voluptate cupidatat consequat id laboris fugiat. Sunt dolore proident sit nostrud culpa sint ea pariatur voluptate elit. Consequat laborum est cillum do pariatur anim dolor voluptate nostrud dolor sit velit. Fugiat quis anim tempor magna Lorem officia velit ut dolore irure occaecat. Enim sunt velit eiusmod ipsum. Aliqua pariatur in nisi dolore tempor do deserunt pariatur duis. Esse laborum qui magna Lorem eiusmod consectetur aliquip duis nisi nostrud officia pariatur exercitation.</p>
-                                        <span className="scores">
-                                        <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star-empty"/> <Glyphicon glyph="star-empty"/>
-                                        </span>
-                                </Well>
-                            </Col>
-                        </Row>
-                        <Row className="show-grid">
-                            <Col xs={6} md={8}>
-                                 <Well bsSize="large">
-                                    <Media className="pull-left"><img className="media-object" alt="#" src="http://via.placeholder.com/150x150"/></Media>
-                                        <a href="/studentclass"><h1>Math 101</h1></a>
-                                        <p>Incididunt quis non minim sunt voluptate cupidatat consequat id laboris fugiat. Sunt dolore proident sit nostrud culpa sint ea pariatur voluptate elit. Consequat laborum est cillum do pariatur anim dolor voluptate nostrud dolor sit velit. Fugiat quis anim tempor magna Lorem officia velit ut dolore irure occaecat. Enim sunt velit eiusmod ipsum. Aliqua pariatur in nisi dolore tempor do deserunt pariatur duis. Esse laborum qui magna Lorem eiusmod consectetur aliquip duis nisi nostrud officia pariatur exercitation.</p>
+                                        <a href="/studentclass"><h1>Modern World History</h1></a>
+                                        <p>The objective of this course is to the people, events, ideas, and places that have influenced and shaped the world from the late 1800s to present day.</p>
                                         <span className="scores">
                                         <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star-empty"/> <Glyphicon glyph="star-empty"/>
                                         </span>

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Button} from 'react-bootstrap';
 import GradebookTable from "../../../components/Gradebook";
 import Dashboard from "../../../components/Dashboard";
 import Assingments from "../../../components/Assingments";
@@ -36,14 +36,35 @@ const Sidebar = ({ matchedPath }) => (
     </div>
  );
 
- 
+ //still need a way to display the actual assingment
+const teacherAssingments = () => (
+    <Row>
+        <Col xs={4} md={4}>
+            <h2>Assingment List</h2>
+            <hr/>
+                {/* <a href="/teacherclass/create"> */}
+                    <Button onClick={<Assingments/>}>
+                        <h3>World War I Review</h3>
+                    </Button>
+                {/* </a>          */}
+        </Col>
+        <Col xs={4} md={4}></Col>
+        <Col xs={4} md={4}></Col>
+    </Row>
+)
 
 class TeacherClassPage extends Component {
     constructor (props) {
         super(props)
         this.state = {
-          
+            isHidden: true
         }
+      }
+
+      toggleHidden () {
+        this.setState({
+          isHidden: !this.state.isHidden
+        })
       }
      
     render() {
@@ -58,7 +79,8 @@ class TeacherClassPage extends Component {
                             <Redirect exact from={`${this.props.match.url}`} to={`${this.props.match.url}/dashboard`} />
                             <Route exact path={`${this.props.match.url}/dashboard`} component={Dashboard} />
                             <Route exact path={`${this.props.match.url}/gradebook`} component={GradebookTable} />
-                            <Route exact path={`${this.props.match.url}/assingments`} component={Assingments} />
+                            <Route exact path={`${this.props.match.url}/assingments`} component={teacherAssingments} />
+                            <Route exact path={`${this.props.match.url}/wwiassingment`} component={Assingments} />
                             <Route exact path={`${this.props.match.url}/create`} component={CreateAssingment} />
                         </Col>
                         <Col xs={6} md={4}>

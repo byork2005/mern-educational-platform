@@ -6,6 +6,7 @@ const Question = ({
   onAnswerSelected,
   onSubmit
 }) => {
+  console.log(question)
   return (
     <div>
       <h3>{question.question}</h3>
@@ -14,7 +15,7 @@ const Question = ({
         <li key={`${index}-${i}`}>
           <input type="radio" name={`question_${index}`} id={`question_${index}_answer_${i}`} defaultChecked={false} value={i} onChange={onAnswerSelected} />
           {' '}
-          <label htmlFor={`question_${index}_answer_${i}`}>{answer.label}</label>
+          <label htmlFor={`question_${index}_answer_${i}`}>{answer.answer}</label>
         </li>
       )}
       </ol>
