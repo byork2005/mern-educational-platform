@@ -58,13 +58,13 @@ class TopNav extends Component {
                 </Nav> */}
                 <Nav pullRight>
                     <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">
-                        <MenuItem eventKey={3.1}>Sign Up
+                        <MenuItem eventKey={3.1}href="/signup">Sign Up
             
                         </MenuItem>
                         {/* <MenuItem eventKey={3.2}>Another action</MenuItem>
                         <MenuItem eventKey={3.3}>Something else here</MenuItem> */}
                         <MenuItem divider />
-                        <MenuItem eventKey={3.3}>Log In</MenuItem>
+                        <MenuItem eventKey={3.3}href="/login">Log In</MenuItem>
                         <MenuItem divider />
                         <MenuItem eventKey={3.4} onClick={this.logout}>Log Out</MenuItem>
                     </NavDropdown>
