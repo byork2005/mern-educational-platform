@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl, ControlLabel, HelpBlock, Well, Media, Glyphicon} from 'react-bootstrap';
+import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap';
 // import { ClassBanner } from "../../../components/Homepage";
 // import './style.css';
 
@@ -68,30 +68,6 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Form, FormGroup, FormControl,
                     </Col>
                     <Row>
                         <Col xs={6} md={8}>
-                        <Row className="show-grid">
-                            <Col xs={6} md={8}>
-                                 <Well bsSize="large">
-                                    <Media className="pull-left"><img className="media-object" alt="#" src="http://via.placeholder.com/150x150"/></Media>
-                                        <a href="/studentclass"><h1>History 101</h1></a>
-                                        <p>Incididunt quis non minim sunt voluptate cupidatat consequat id laboris fugiat. Sunt dolore proident sit nostrud culpa sint ea pariatur voluptate elit. Consequat laborum est cillum do pariatur anim dolor voluptate nostrud dolor sit velit. Fugiat quis anim tempor magna Lorem officia velit ut dolore irure occaecat. Enim sunt velit eiusmod ipsum. Aliqua pariatur in nisi dolore tempor do deserunt pariatur duis. Esse laborum qui magna Lorem eiusmod consectetur aliquip duis nisi nostrud officia pariatur exercitation.</p>
-                                        <span className="scores">
-                                        <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star-empty"/> <Glyphicon glyph="star-empty"/>
-                                        </span>
-                                </Well>
-                            </Col>
-                        </Row>
-                        <Row className="show-grid">
-                            <Col xs={6} md={8}>
-                                 <Well bsSize="large">
-                                    <Media className="pull-left"><img className="media-object" alt="#" src="http://via.placeholder.com/150x150"/></Media>
-                                        <a href="/studentclass"><h1>Math 101</h1></a>
-                                        <p>Incididunt quis non minim sunt voluptate cupidatat consequat id laboris fugiat. Sunt dolore proident sit nostrud culpa sint ea pariatur voluptate elit. Consequat laborum est cillum do pariatur anim dolor voluptate nostrud dolor sit velit. Fugiat quis anim tempor magna Lorem officia velit ut dolore irure occaecat. Enim sunt velit eiusmod ipsum. Aliqua pariatur in nisi dolore tempor do deserunt pariatur duis. Esse laborum qui magna Lorem eiusmod consectetur aliquip duis nisi nostrud officia pariatur exercitation.</p>
-                                        <span className="scores">
-                                        <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star"/> <Glyphicon glyph="star-empty"/> <Glyphicon glyph="star-empty"/>
-                                        </span>
-                                </Well>
-                            </Col>
-                        </Row>
                             <Modal show={this.state.show} onHide={this.handleClose}>
                                 <Modal.Header>
                                     <Modal.Title>Add A Class</Modal.Title>
