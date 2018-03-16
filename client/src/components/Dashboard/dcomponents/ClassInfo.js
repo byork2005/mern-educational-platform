@@ -7,10 +7,10 @@ class ClassInfo extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            name: '',
-            teacher: '',
-            schedule: '',
-            location: ''
+            name: 'Modern United States History',
+            teacher: 'Mrs. Spencer',
+            schedule: 'M-F, 12:50-1:45',
+            location: 'Room 211'
         };    
     };
 
