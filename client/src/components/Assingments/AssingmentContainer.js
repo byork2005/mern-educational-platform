@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import {Row, Col} from 'react-bootstrap';
+import {Row} from 'react-bootstrap';
 import './Assingments.css';
 import Question from './Question.js'
 
-
-const DATA = "./test.json"
 
 class AssingmentContainer extends Component {
     constructor(props) {

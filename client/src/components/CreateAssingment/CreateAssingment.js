@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import {Row, Col, FormGroup, ControlLabel, FormControl, Carousel } from 'react-bootstrap';
-import { BrowserRouter as Link } from "react-router-dom";
+import React from 'react';
+import {Row, Col, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 import './CreateAssingment.css';
 import './style.css';
 

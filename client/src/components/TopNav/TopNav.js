@@ -1,7 +1,6 @@
 import React,{ Component } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import axios from 'axios'
-import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
+import {Navbar, Nav, MenuItem, NavDropdown} from 'react-bootstrap';
 
 class TopNav extends Component {
     constructor() {
@@ -29,7 +28,7 @@ class TopNav extends Component {
       }
 
     render() {
-        const loggedIn = this.props.loggedIn;
+        // const loggedIn = this.props.loggedIn;
         console.log('navbar render, props: ', this.props)
 
         return (

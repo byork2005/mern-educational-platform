@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Row, Col} from 'react-bootstrap';
 import './Assingments.css';
 import AssingmentContainer from './AssingmentContainer.js';
 

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Route, Link, Redirect } from "react-router-dom";
 import {Row, Col, Button} from 'react-bootstrap';
 import GradebookTable from "../../../components/Gradebook";
 import Dashboard from "../../../components/Dashboard";

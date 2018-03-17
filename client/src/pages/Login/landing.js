@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 import {Row, Col, Well, Button} from 'react-bootstrap';
 import Signup from "./sign-up.js";
 import Login from "./login.js";

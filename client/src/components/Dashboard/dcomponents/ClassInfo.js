@@ -1,5 +1,4 @@
 import React from "react";
-import {Row, Col, Well} from 'react-bootstrap';
 import API from "../../../utils/API";
 
 

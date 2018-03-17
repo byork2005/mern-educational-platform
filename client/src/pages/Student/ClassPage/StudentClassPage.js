@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Route, Link, Redirect } from "react-router-dom";
 import {Row, Col} from 'react-bootstrap';
 import Dashboard from "../../../components/Dashboard";
 import Assingments from "../../../components/Assingments"

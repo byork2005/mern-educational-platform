@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {Row, Col, Button, Popover, Tooltip, Modal, Well, Media, Glyphicon, Form, FormGroup, FormControl, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {Row, Col, Button, Modal, Well, Media, Glyphicon, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 // import { ClassBanner } from "../../../components/Homepage";
 // import './style.css';
 
@@ -50,12 +49,12 @@ import {Row, Col, Button, Popover, Tooltip, Modal, Well, Media, Glyphicon, Form,
 
     render() {
 
-        const popover = (
-            <Popover id="modal-popover" title="popover">
+        // const popover = (
+        //     <Popover id="modal-popover" title="popover">
               
-            </Popover>
-          );
-          const tooltip = <Tooltip id="modal-tooltip"></Tooltip>;
+        //     </Popover>
+        //   );
+        //   const tooltip = <Tooltip id="modal-tooltip"></Tooltip>;
 
         return (
             <div>

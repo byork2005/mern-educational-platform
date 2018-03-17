@@ -1,6 +1,5 @@
 import React from "react";
-import {Row, Col, Well} from 'react-bootstrap';
-import Clock from 'react-clock';
+import {Well} from 'react-bootstrap';
 import './DateClock.css';
 
 // const DateClock = () => 

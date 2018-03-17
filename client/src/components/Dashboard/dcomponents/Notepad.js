@@ -1,5 +1,4 @@
-import React from "react";
-import {Row, Col, Well} from 'react-bootstrap';        
+import React from "react";     
         
         
         class Model {
@@ -86,7 +85,7 @@ import {Row, Col, Well} from 'react-bootstrap';
         handleAddNote() {
 
             // Add note if input is not blank
-            if(this.state.inputText != '') {
+            if(this.state.inputText !== '') {
             controller.addNote({
                 content: this.state.inputText,
                 bgColor: this.state.color
@@ -99,7 +98,7 @@ import {Row, Col, Well} from 'react-bootstrap';
             });
             
             // Show note successfully added alert
-            if(this.state.inputText != '') {
+            if(this.state.inputText !== '') {
             // Show success alert message
             this.showAddAlert();
             }  
@@ -118,13 +117,13 @@ import {Row, Col, Well} from 'react-bootstrap';
         showAddAlert() {
             this.setState({alert: 'Note Added!'})
             
-            let hideAlert = setTimeout(this.hideAlert.bind(this), 1000);
+            // let hideAlert = setTimeout(this.hideAlert.bind(this), 1000);
         }
             
         showDeleteAlert() {
             this.setState({alert: 'Note Deleted!'})
             
-            let hideAlert = setTimeout(this.hideAlert.bind(this), 1000);
+            // let hideAlert = setTimeout(this.hideAlert.bind(this), 1000);
         }
         
         hideAlert() {
@@ -162,7 +161,7 @@ import {Row, Col, Well} from 'react-bootstrap';
             deleteNote(id) {
                 let new_notes = [];
                 for(let i = 0; i < model.notes.length; i++ ) {
-                if(model.notes[i]['id'] == id) {
+                if(model.notes[i]['id'] === id) {
                     // do nothing
                 } else {
                     new_notes.push(model.notes[i]);

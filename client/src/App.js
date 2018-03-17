@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
-import {Row, Col, Well, Button} from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import TopNav from "./components/TopNav";
 import TeacherClassPage from "./pages/Teacher/ClassPage";
 import TeacherHomePage from "./pages/Teacher/HomePage";
@@ -10,11 +9,9 @@ import Signup from "./pages/Login/sign-up.js";
 import Login from "./pages/Login/login.js";
 import LandingPage from "./pages/Login/landing.js";
 
-let testthing;
-
-function handleSelect(selectedKey) {
-  alert(`selected ${selectedKey}`);
-}
+// function handleSelect(selectedKey) {
+//   alert(`selected ${selectedKey}`);
+// }
 
 //Experimental Component to get to the /welcome page, ignore for now
 // const Welcome = () => (
@@ -52,7 +49,6 @@ class App extends Component {
   }
 
   render() {
-    testthing = "TEST STRING TO PASS GAS"
     return (
     <Router>
       <div>
